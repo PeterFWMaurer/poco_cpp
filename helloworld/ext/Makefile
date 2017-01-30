@@ -26,7 +26,7 @@ debug:
 	make -C $(BUILD_DIR_DEBUG) DESTDIR=$(INST_DIR_DEBUG) install
 
 .PHONY: release
-debug:
+release:
 	$(Q)mkdir -p "$(BUILD_DIR_RELEASE)"
 	$(Q)mkdir -p "$(INST_DIR_RELEASE)"
 	cd "$(BUILD_DIR_RELEASE)" && cmake -G $(GENERATOR) -DCMAKE_BUILD_TYPE=RELEASE "$(GOOGLE_TEST_DIR)"
