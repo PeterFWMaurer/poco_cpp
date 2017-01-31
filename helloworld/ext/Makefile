@@ -15,7 +15,7 @@ INST_DIR_RELEASE := $(INST_DIR)/release
 #PATH := $(PATH):/usr/local/bin
 GENERATOR := "Unix Makefiles"
 
-all: debug
+all: debug release
 
 .PHONY: debug
 debug:

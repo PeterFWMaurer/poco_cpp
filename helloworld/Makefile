@@ -18,7 +18,8 @@ INST_DIR_RELEASE := $(INST_DIR)/release
 PATH := $(PATH):/usr/local/bin
 GENERATOR := "Unix Makefiles"
 
-all: ext debug release
+# all: ext debug release
+all: debug release
 
 .PHONY: ext
 ext:
@@ -27,6 +28,7 @@ ext:
 
 .PHONY: debug
 debug:
+	$(Q)make -C $(EXT_DIR) debug
 	$(Q)mkdir -p "$(BUILD_DIR_DEBUG)"
 	$(Q)cd "$(BUILD_DIR_DEBUG)" && cmake -G $(GENERATOR) -DCMAKE_BUILD_TYPE=DEBUG -DINST_DIR="$(INST_DIR_DEBUG)" "$(SOURCE_DIR)"
 	$(Q)make -C $(BUILD_DIR_DEBUG) VERBOSE=1
@@ -34,6 +36,7 @@ debug:
 
 .PHONY: release
 release:
+	$(Q)make -C $(EXT_DIR) release
 	$(Q)mkdir -p "$(BUILD_DIR_RELEASE)"
 	$(Q)cd "$(BUILD_DIR_RELEASE)" && cmake -G $(GENERATOR) -DCMAKE_BUILD_TYPE=RELEASE -DINST_DIR="$(INST_DIR_RELEASE)" "$(SOURCE_DIR)"
 	$(Q)make -C $(BUILD_DIR_RELEASE) VERBOSE=1
