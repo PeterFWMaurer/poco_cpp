@@ -5,11 +5,16 @@
  *      Author: peter
  */
 
+#include "HelloHelper.h"
+
 #include <iostream>
+
 
 int main()
 {
-	std::cout<<"Hello, World !!!"<<std::endl;
+	HelloHelper worldHelper("World");
+
+	std::cout<<worldHelper.sayHello()<<std::endl;
 	return 0;
 }
 
