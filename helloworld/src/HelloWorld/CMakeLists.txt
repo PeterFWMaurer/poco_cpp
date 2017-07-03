@@ -10,10 +10,12 @@ set (APP_MAIN
 
 set(APP_SOURCES
     src/HelloHelper.cxx
+    src/DemoClass.cpp
 )
 
 set(TEST_SOURCES
     test/HelloHelper_test.cxx
+    test/DemoClass_test.cpp
 )
 
 add_executable(${APP_NAME}
@@ -35,6 +37,13 @@ target_link_libraries(${TEST_NAME}
 )
 
 target_compile_features(${TEST_NAME} PUBLIC cxx_std_14)
+
+#if (iwyu_path)
+    message(DEBUG "Analyze includes")
+    set_property(TARGET ${APP_NAME} PROPERTY CXX_INCLUDE_WHAT_YOU_USE ${iwyu_path_and_options})
+#    set_property(TARGET ${APP_NAME} PROPERTY CXX_INCLUDE_WHAT_YOU_USE ${iwyu_path})
+
+#endif()
  
 add_test(${TEST_NAME} ${TEST_NAME})
 

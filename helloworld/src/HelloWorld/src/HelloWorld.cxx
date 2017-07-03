@@ -7,14 +7,15 @@
 
 #include "HelloHelper.h"
 
+#include <vector>
+#include <memory>
 #include <iostream>
-
 
 int main()
 {
-	HelloHelper worldHelper("World");
+	std::shared_ptr<HelloHelper> worldHelper(new HelloHelper("World"));
 
-	std::cout<<worldHelper.sayHello()<<std::endl;
+	std::cout<<worldHelper->sayHello()<<std::endl;
 	return 0;
 }
 

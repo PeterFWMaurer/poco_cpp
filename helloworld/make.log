@@ -1,0 +1,289 @@
+make[1]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext'
+cd "/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../build/ext/debug" && cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=DEBUG "/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest"
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug
+make -C /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../build/ext/debug VERBOSE=1
+make[2]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+/usr/local/bin/cmake -H/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest -B/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/local/bin/cmake -E cmake_progress_start /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/CMakeFiles /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[3]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make -f googlemock/CMakeFiles/gmock_main.dir/build.make googlemock/CMakeFiles/gmock_main.dir/depend
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug && /usr/local/bin/cmake -E cmake_depends "Unix Makefiles" /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake --color=
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/CMakeFiles/gmock_main.dir/depend.internal".
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/CMakeFiles/gmock_main.dir/depend.internal".
+Scanning dependencies of target gmock_main
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make -f googlemock/CMakeFiles/gmock_main.dir/build.make googlemock/CMakeFiles/gmock_main.dir/build
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[  9%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest  -g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/src/gtest-all.cc
+[ 18%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock-all.cc.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest  -g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock-all.cc.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock/src/gmock-all.cc
+[ 27%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest  -g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock/src/gmock_main.cc
+[ 36%] Linking CXX static library libgmock_main.a
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock && /usr/local/bin/cmake -P CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock && /usr/local/bin/cmake -E cmake_link_script CMakeFiles/gmock_main.dir/link.txt --verbose=1
+/usr/bin/ar qc libgmock_main.a  CMakeFiles/gmock_main.dir/__/googletest/src/gtest-all.cc.o CMakeFiles/gmock_main.dir/src/gmock-all.cc.o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+/usr/bin/ranlib libgmock_main.a
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[ 36%] Built target gmock_main
+make -f googlemock/CMakeFiles/gmock.dir/build.make googlemock/CMakeFiles/gmock.dir/depend
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug && /usr/local/bin/cmake -E cmake_depends "Unix Makefiles" /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/CMakeFiles/gmock.dir/depend.internal".
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/CMakeFiles/gmock.dir/depend.internal".
+Scanning dependencies of target gmock
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make -f googlemock/CMakeFiles/gmock.dir/build.make googlemock/CMakeFiles/gmock.dir/build
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[ 45%] Building CXX object googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest  -g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/src/gtest-all.cc
+[ 54%] Building CXX object googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest  -g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googlemock/src/gmock-all.cc
+[ 63%] Linking CXX static library libgmock.a
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock && /usr/local/bin/cmake -P CMakeFiles/gmock.dir/cmake_clean_target.cmake
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock && /usr/local/bin/cmake -E cmake_link_script CMakeFiles/gmock.dir/link.txt --verbose=1
+/usr/bin/ar qc libgmock.a  CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o CMakeFiles/gmock.dir/src/gmock-all.cc.o
+/usr/bin/ranlib libgmock.a
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[ 63%] Built target gmock
+make -f googlemock/gtest/CMakeFiles/gtest.dir/build.make googlemock/gtest/CMakeFiles/gtest.dir/depend
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug && /usr/local/bin/cmake -E cmake_depends "Unix Makefiles" /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake --color=
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest/CMakeFiles/gtest.dir/depend.internal".
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest/CMakeFiles/gtest.dir/depend.internal".
+Scanning dependencies of target gtest
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make -f googlemock/gtest/CMakeFiles/gtest.dir/build.make googlemock/gtest/CMakeFiles/gtest.dir/build
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[ 72%] Building CXX object googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest  -g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/src/gtest-all.cc
+[ 81%] Linking CXX static library libgtest.a
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest && /usr/local/bin/cmake -P CMakeFiles/gtest.dir/cmake_clean_target.cmake
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest && /usr/local/bin/cmake -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=1
+/usr/bin/ar qc libgtest.a  CMakeFiles/gtest.dir/src/gtest-all.cc.o
+/usr/bin/ranlib libgtest.a
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[ 81%] Built target gtest
+make -f googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googlemock/gtest/CMakeFiles/gtest_main.dir/depend
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug && /usr/local/bin/cmake -E cmake_depends "Unix Makefiles" /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest/CMakeFiles/gtest_main.dir/depend.internal".
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest/CMakeFiles/gtest_main.dir/depend.internal".
+Scanning dependencies of target gtest_main
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make -f googlemock/gtest/CMakeFiles/gtest_main.dir/build.make googlemock/gtest/CMakeFiles/gtest_main.dir/build
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[ 90%] Building CXX object googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/include -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest  -g    -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/googletest/googletest/src/gtest_main.cc
+[100%] Linking CXX static library libgtest_main.a
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest && /usr/local/bin/cmake -P CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/googlemock/gtest && /usr/local/bin/cmake -E cmake_link_script CMakeFiles/gtest_main.dir/link.txt --verbose=1
+/usr/bin/ar qc libgtest_main.a  CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+/usr/bin/ranlib libgtest_main.a
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[100%] Built target gtest_main
+make[3]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+/usr/local/bin/cmake -E cmake_progress_start /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug/CMakeFiles 0
+make[2]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make -C /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../build/ext/debug DESTDIR=/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug install
+make[2]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make[3]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[ 36%] Built target gmock_main
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[ 63%] Built target gmock
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[ 81%] Built target gtest
+make[4]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make[4]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+[100%] Built target gtest_main
+make[3]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+Install the project...
+-- Install configuration: "DEBUG"
+-- Installing: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/lib/libgmock.a
+-- Installing: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/lib/libgmock_main.a
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-actions.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-generated-nice-strict.h.pump
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-spec-builders.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-generated-actions.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-cardinalities.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/internal
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/internal/gmock-generated-internal-utils.h.pump
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/internal/gmock-internal-utils.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/internal/gmock-port.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/internal/gmock-generated-internal-utils.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/internal/custom
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/internal/custom/gmock-generated-actions.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/internal/custom/gmock-generated-actions.h.pump
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/internal/custom/gmock-port.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/internal/custom/gmock-matchers.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-generated-actions.h.pump
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-generated-nice-strict.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-more-actions.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-more-matchers.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-matchers.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-generated-matchers.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-generated-function-mockers.h.pump
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-generated-function-mockers.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gmock/gmock-generated-matchers.h.pump
+-- Installing: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/lib/libgtest.a
+-- Installing: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/lib/libgtest_main.a
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest_prod.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest-typed-test.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest-death-test.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest-param-test.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest-printers.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest-spi.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest-test-part.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest-param-test.h.pump
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-internal.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-string.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-port-arch.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-death-test-internal.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-tuple.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-type-util.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-tuple.h.pump
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-filepath.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-port.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-param-util-generated.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-type-util.h.pump
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-param-util-generated.h.pump
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-param-util.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/gtest-linked_ptr.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/custom
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/custom/gtest-printers.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/custom/gtest-port.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/internal/custom/gtest.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest_pred_impl.h
+-- Up-to-date: /home/peter/git.maurer-treutner.de/helloworld/helloworld/ext/../inst/debug/usr/local/include/gtest/gtest-message.h
+make[2]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/ext/debug'
+make[1]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/ext'
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found GTest: /home/peter/git.maurer-treutner.de/helloworld/helloworld/inst/debug/usr/local/lib/libgtest.a  
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug
+make[1]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+/usr/local/bin/cmake -H/home/peter/git.maurer-treutner.de/helloworld/helloworld/src -B/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/local/bin/cmake -E cmake_progress_start /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/CMakeFiles /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+make -f HelloWorld/CMakeFiles/HelloWorld.dir/build.make HelloWorld/CMakeFiles/HelloWorld.dir/depend
+make[3]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug && /usr/local/bin/cmake -E cmake_depends "Unix Makefiles" /home/peter/git.maurer-treutner.de/helloworld/helloworld/src /home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld/CMakeFiles/HelloWorld.dir/DependInfo.cmake --color=
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld/CMakeFiles/HelloWorld.dir/DependInfo.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld/CMakeFiles/HelloWorld.dir/depend.internal".
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld/CMakeFiles/HelloWorld.dir/depend.internal".
+Scanning dependencies of target HelloWorld
+make[3]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+make -f HelloWorld/CMakeFiles/HelloWorld.dir/build.make HelloWorld/CMakeFiles/HelloWorld.dir/build
+make[3]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+[ 11%] Building CXX object HelloWorld/CMakeFiles/HelloWorld.dir/src/HelloWorld.cxx.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld && /usr/local/bin/cmake -E __run_iwyu --iwyu="/usr/bin/include-what-you-use;-I/usr/lib/clang/3.5/include" -- /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/inst/debug/usr/local/include, -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/inc  -g   -std=gnu++14 -o CMakeFiles/HelloWorld.dir/src/HelloWorld.cxx.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/src/HelloWorld.cxx
+[ 22%] Building CXX object HelloWorld/CMakeFiles/HelloWorld.dir/src/HelloHelper.cxx.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld && /usr/local/bin/cmake -E __run_iwyu --iwyu="/usr/bin/include-what-you-use;-I/usr/lib/clang/3.5/include" -- /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/inst/debug/usr/local/include, -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/inc  -g   -std=gnu++14 -o CMakeFiles/HelloWorld.dir/src/HelloHelper.cxx.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/src/HelloHelper.cxx
+[ 33%] Building CXX object HelloWorld/CMakeFiles/HelloWorld.dir/src/DemoClass.cpp.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld && /usr/local/bin/cmake -E __run_iwyu --iwyu="/usr/bin/include-what-you-use;-I/usr/lib/clang/3.5/include" -- /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/inst/debug/usr/local/include, -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/inc  -g   -std=gnu++14 -o CMakeFiles/HelloWorld.dir/src/DemoClass.cpp.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/src/DemoClass.cpp
+[ 44%] Linking CXX executable HelloWorld
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld && /usr/local/bin/cmake -E cmake_link_script CMakeFiles/HelloWorld.dir/link.txt --verbose=1
+/usr/bin/c++  -g   CMakeFiles/HelloWorld.dir/src/HelloWorld.cxx.o CMakeFiles/HelloWorld.dir/src/HelloHelper.cxx.o CMakeFiles/HelloWorld.dir/src/DemoClass.cpp.o  -o HelloWorld 
+make[3]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+[ 44%] Built target HelloWorld
+make -f HelloWorld/CMakeFiles/test_HelloWorld.dir/build.make HelloWorld/CMakeFiles/test_HelloWorld.dir/depend
+make[3]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug && /usr/local/bin/cmake -E cmake_depends "Unix Makefiles" /home/peter/git.maurer-treutner.de/helloworld/helloworld/src /home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld/CMakeFiles/test_HelloWorld.dir/DependInfo.cmake --color=
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld/CMakeFiles/test_HelloWorld.dir/DependInfo.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld/CMakeFiles/test_HelloWorld.dir/depend.internal".
+Dependee "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld/CMakeFiles/test_HelloWorld.dir/depend.internal".
+Scanning dependencies of target test_HelloWorld
+make[3]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+make -f HelloWorld/CMakeFiles/test_HelloWorld.dir/build.make HelloWorld/CMakeFiles/test_HelloWorld.dir/build
+make[3]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+[ 55%] Building CXX object HelloWorld/CMakeFiles/test_HelloWorld.dir/src/HelloHelper.cxx.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/inst/debug/usr/local/include, -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/inc  -g   -std=gnu++14 -o CMakeFiles/test_HelloWorld.dir/src/HelloHelper.cxx.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/src/HelloHelper.cxx
+[ 66%] Building CXX object HelloWorld/CMakeFiles/test_HelloWorld.dir/src/DemoClass.cpp.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/inst/debug/usr/local/include, -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/inc  -g   -std=gnu++14 -o CMakeFiles/test_HelloWorld.dir/src/DemoClass.cpp.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/src/DemoClass.cpp
+[ 77%] Building CXX object HelloWorld/CMakeFiles/test_HelloWorld.dir/test/HelloHelper_test.cxx.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/inst/debug/usr/local/include, -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/inc  -g   -std=gnu++14 -o CMakeFiles/test_HelloWorld.dir/test/HelloHelper_test.cxx.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/test/HelloHelper_test.cxx
+[ 88%] Building CXX object HelloWorld/CMakeFiles/test_HelloWorld.dir/test/DemoClass_test.cpp.o
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld && /usr/bin/c++   -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/inst/debug/usr/local/include, -I/home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/inc  -g   -std=gnu++14 -o CMakeFiles/test_HelloWorld.dir/test/DemoClass_test.cpp.o -c /home/peter/git.maurer-treutner.de/helloworld/helloworld/src/HelloWorld/test/DemoClass_test.cpp
+[100%] Linking CXX executable test_HelloWorld
+cd /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/HelloWorld && /usr/local/bin/cmake -E cmake_link_script CMakeFiles/test_HelloWorld.dir/link.txt --verbose=1
+/usr/bin/c++  -g   CMakeFiles/test_HelloWorld.dir/src/HelloHelper.cxx.o CMakeFiles/test_HelloWorld.dir/src/DemoClass.cpp.o CMakeFiles/test_HelloWorld.dir/test/HelloHelper_test.cxx.o CMakeFiles/test_HelloWorld.dir/test/DemoClass_test.cpp.o  -o test_HelloWorld /home/peter/git.maurer-treutner.de/helloworld/helloworld/inst/debug/usr/local/lib/libgtest.a /home/peter/git.maurer-treutner.de/helloworld/helloworld/inst/debug/usr/local/lib/libgtest_main.a -lpthread 
+make[3]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+[100%] Built target test_HelloWorld
+make[2]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+/usr/local/bin/cmake -E cmake_progress_start /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug/CMakeFiles 0
+make[1]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+make[1]: Entering directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+Running tests...
+Test project /home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug
+    Start 1: test_HelloWorld
+1/1 Test #1: test_HelloWorld ..................***Failed    0.00 sec
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   0.00 sec
+
+The following tests FAILED:
+	  1 - test_HelloWorld (Failed)
+Makefile:83: recipe for target 'test' failed
+make[1]: Leaving directory '/home/peter/git.maurer-treutner.de/helloworld/helloworld/build/debug'
+Makefile:31: recipe for target 'debug' failed
