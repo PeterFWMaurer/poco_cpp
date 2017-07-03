@@ -1,3 +1,0 @@
-[submodule "helloworld/ext/googletest"]
-	path = helloworld/ext/googletest
-	url = https://github.com/google/googletest
