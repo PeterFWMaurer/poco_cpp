@@ -1,0 +1,5 @@
+/build/
+/inst/
+.project
+.cproject
+/.settings/
