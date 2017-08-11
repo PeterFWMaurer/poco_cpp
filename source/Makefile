@@ -12,13 +12,14 @@ BUILD_DIR := $(PROJECT_DIR)/build
 EXT_DIR := $(PROJECT_DIR)/ext
 BUILD_DIR_DEBUG := $(BUILD_DIR)/debug
 BUILD_DIR_RELEASE := $(BUILD_DIR)/release
-INST_DIR := $(PROJECT_DIR)/inst
-INST_DIR_DEBUG := $(INST_DIR)/debug
-INST_DIR_RELEASE := $(INST_DIR)/release
+PREFIX_DIR := $(PROJECT_DIR)/root/usr/local
 
 PATH := $(PATH):/usr/local/bin
 GENERATOR := "Unix Makefiles"
 
+COMMON_CMAKE_FLAGS := -G $(GENERATOR) -DEXT_DIR="$(EXT_DIR)" -DCMAKE_INSTALL_PREFIX=$(PREFIX_DIR)
+DEBUG_CMAKE_FLAGS := -DCMAKE_BUILD_TYPE=debug -DCMAKE_DEBUG_POSTFIX=d
+RELEASE_CMAKE_FLAGS := -DCMAKE_BUILD_TYPE=release
 # all: ext debug release
 all: debug release
 
@@ -34,19 +35,16 @@ debug: $(BUILD_DIR_DEBUG)/Makefile
 
 $(BUILD_DIR_DEBUG)/Makefile:
 	$(Q)mkdir -p "$(BUILD_DIR_DEBUG)"
-	$(Q)cd "$(BUILD_DIR_DEBUG)" && cmake -G $(GENERATOR) -DCMAKE_BUILD_TYPE=DEBUG -DINST_DIR="$(INST_DIR_DEBUG)" "$(SOURCE_DIR)"
+	$(Q)cd "$(BUILD_DIR_DEBUG)" && cmake $(COMMON_CMAKE_FLAGS) $(DEBUG_CMAKE_FLAGS) "$(SOURCE_DIR)"
 
 .PHONY: release
 release: $(BUILD_DIR_RELEASE)/Makefile
-#	$(Q)make -C $(EXT_DIR) release
-#	$(Q)mkdir -p "$(BUILD_DIR_RELEASE)"
-#	$(Q)cd "$(BUILD_DIR_RELEASE)" && cmake -G $(GENERATOR) -DCMAKE_BUILD_TYPE=RELEASE -DINST_DIR="$(INST_DIR_RELEASE)" "$(SOURCE_DIR)"
 	$(Q)make -C $(BUILD_DIR_RELEASE) VERBOSE=1
 	$(Q)make -C $(BUILD_DIR_RELEASE) test
 
 $(BUILD_DIR_RELEASE)/Makefile:
 	$(Q)mkdir -p "$(BUILD_DIR_RELEASE)"
-	$(Q)cd "$(BUILD_DIR_RELEASE)" && cmake -G $(GENERATOR) -DCMAKE_BUILD_TYPE=RELEASE -DINST_DIR="$(INST_DIR_RELEASE)" "$(SOURCE_DIR)"
+	$(Q)cd "$(BUILD_DIR_RELEASE)" && cmake $(COMMON_CMAKE_FLAGS) $(RELEASE_CMAKE_FLAGS) "$(SOURCE_DIR)"
 
 .PHONY: clean
 clean:

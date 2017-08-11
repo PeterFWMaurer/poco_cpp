@@ -21,7 +21,7 @@ all: debug release
 debug:
 	$(Q)mkdir -p "$(BUILD_DIR_DEBUG)"
 	$(Q)mkdir -p "$(INST_DIR_DEBUG)"
-	cd "$(BUILD_DIR_DEBUG)" && cmake -G $(GENERATOR) -DCMAKE_BUILD_TYPE=DEBUG "$(GOOGLE_TEST_DIR)"
+	cd "$(BUILD_DIR_DEBUG)" && cmake -G $(GENERATOR) -DCMAKE_BUILD_TYPE=DEBUG -DCMAKE_DEBUG_POSTFIX=d "$(GOOGLE_TEST_DIR)"
 	make -C $(BUILD_DIR_DEBUG) VERBOSE=1
 	make -C $(BUILD_DIR_DEBUG) DESTDIR=$(INST_DIR_DEBUG) install
 
