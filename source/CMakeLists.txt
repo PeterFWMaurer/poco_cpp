@@ -5,7 +5,7 @@ project(helloworld,C++)
 enable_testing()
 
 # include make of external projects used for build
-include(${EXT_DIR}/CMakeListsExt.txt)
+include(${EXT_DIR}/CMakeListsExt.cmake)
 
 # google test will be searched in our intallation dir
 set(GTEST_ROOT ${CMAKE_INSTALL_PREFIX})

@@ -1,3 +1,6 @@
 [submodule "ext/googletest"]
 	path = ext/googletest
 	url = https://git.maurer-treutner.de/git/ext/googletest
+[submodule "ext/poco"]
+	path = ext/poco
+	url = https://github.com/pocoproject/poco
