@@ -2,11 +2,8 @@ cmake_minimum_required(VERSION 3.8)
 
 project(helloworld)
 
-enable_testing()
-
-# include make of external projects used for build
-# include(${EXT_DIR}/CMakeListsExt.cmake)
-
+enable_testing()  
+  
 # google test will be searched in our intallation dir
 set(GTEST_ROOT ${CMAKE_INSTALL_PREFIX})
 message("GTEST_ROOT: ${GTEST_ROOT}")
@@ -32,9 +29,6 @@ include_directories(
    ${CMAKE_PREFIX_PATH/inlclude}
 )
 
-#add_subdirectory(PocoTypes)
-#add_subdirectory(HelloWorld)
-#add_subdirectory(HelloPoco)
 
 add_subdirectory(PocoSample)
 
