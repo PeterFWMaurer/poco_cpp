@@ -8,7 +8,7 @@ endif
 PWD := $(shell pwd)
 PROJECT_DIR := $(PWD)/..
 SOURCE_DIR := $(PROJECT_DIR)/source
-BUILD_DIR := $(PROJECT_DIR)/build
+BUILD_DIR := $(PWD)/build
 EXT_DIR := $(PROJECT_DIR)/ext
 BUILD_DIR_DEBUG := $(BUILD_DIR)/debug
 BUILD_DIR_RELEASE := $(BUILD_DIR)/release
@@ -29,18 +29,20 @@ ext:
 	make -C $(EXT_DIR)
 
 .PHONY: debug
-debug: $(BUILD_DIR_DEBUG)/Makefile
+debug: debug_cmake
 	$(Q)make -C $(BUILD_DIR_DEBUG) 
 	$(Q)make -C $(BUILD_DIR_DEBUG) test
 
+debug_cmake: $(BUILD_DIR_DEBUG)/Makefile
+
 $(BUILD_DIR_DEBUG)/Makefile:
 	$(Q)mkdir -p "$(BUILD_DIR_DEBUG)"
-	$(Q)cd "$(BUILD_DIR_DEBUG)" && cmake $(COMMON_CMAKE_FLAGS) $(DEBUG_CMAKE_FLAGS) "$(SOURCE_DIR)"
+#	$(Q)cd "$(BUILD_DIR_DEBUG)" && cmake $(COMMON_CMAKE_FLAGS) $(DEBUG_CMAKE_FLAGS) "$(SOURCE_DIR)"
 
 .PHONY: release
 release: $(BUILD_DIR_RELEASE)/Makefile
 	$(Q)make -C $(BUILD_DIR_RELEASE) VERBOSE=1
-	$(Q)make -C $(BUILD_DIR_RELEASE) test
+#	$(Q)make -C $(BUILD_DIR_RELEASE) test
 
 $(BUILD_DIR_RELEASE)/Makefile:
 	$(Q)mkdir -p "$(BUILD_DIR_RELEASE)"

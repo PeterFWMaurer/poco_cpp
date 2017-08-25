@@ -47,5 +47,7 @@ target_compile_features(${TEST_NAME} PUBLIC cxx_std_14)
  
 add_test(${TEST_NAME} ${TEST_NAME})
 
+add_test(${APP_NAME} ${APP_NAME})
+
 
 
