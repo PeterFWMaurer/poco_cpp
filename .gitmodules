@@ -1,3 +1,6 @@
 [submodule "ext/poco"]
 	path = ext/poco
 	url = https://github.com/pocoproject/poco
+[submodule "ext/googletest"]
+	path = ext/googletest
+	url = https://github.com/google/googletest
