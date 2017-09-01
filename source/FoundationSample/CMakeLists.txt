@@ -23,9 +23,13 @@ set_property(TARGET ${APP_NAME} PROPERTY CXX_STANDARD 14)
 target_link_libraries(${APP_NAME} 
     SampleSubsystem
     TypeDemo
+    ThreadDemo
     Poco::Foundation
     Poco::Util
 )
+
+install(TARGETS ${APP_NAME} 
+		RUNTIME DESTINATION bin)
 
 #add_executable(${TEST_NAME}
 #    ${LIB_SOURCES}

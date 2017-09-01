@@ -6,6 +6,7 @@
  */
 #include "SampleSubsystem/SampleSub.h"
 
+#include "Poco/Util/Option.h"
 #include "Poco/String.h"
 
 

@@ -8,6 +8,7 @@
 #include "FoundationSample/SampleApp.h"
 
 #include "TypeDemo/TypeDemoSub.h"
+#include "ThreadDemo/ThreadDemoSub.h"
 
 
 #include <iostream>
@@ -28,14 +29,21 @@ namespace FoundationSample
 {
 
 	using TypeDemo::TypeDemoSub;
+	using ThreadDemo::ThreadDemoSub;
 	using SampleSubsystem::SampleSub;
 
 	SampleApp::SampleApp():
 			_helpRequested(false)
 	{
 		addSubsystem(new TypeDemoSub());
+		addSubsystem(new ThreadDemoSub());
 	//	SampleSubsystem::SampleSub *pS=new SampleSubsystem::SampleSub("Hallo");
 	//	addSubsystem(new TestSubsystem);
+	}
+
+	void SampleApp::initialize(Application &self)
+	{
+		Application::initialize(self);
 	}
 
 	void SampleApp::defineOptions(OptionSet& options)

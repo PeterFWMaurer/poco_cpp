@@ -19,6 +19,8 @@ namespace TypeDemo
 	{
 	public:
 		TypeDemoSub();
+
+		virtual ~TypeDemoSub(){}
 	};
 
 }

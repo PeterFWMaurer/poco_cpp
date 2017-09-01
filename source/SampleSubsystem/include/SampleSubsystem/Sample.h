@@ -23,6 +23,8 @@ namespace SampleSubsystem
 			_name(name)
 		{};
 
+		virtual ~Sample(){}
+
 		const std::string &name()
 		{
 			return _name;

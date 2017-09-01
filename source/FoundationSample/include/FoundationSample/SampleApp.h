@@ -30,6 +30,8 @@ namespace FoundationSample
 		void handleOption(const std::string & name,
 						  const std::string & value);
 
+		void initialize(Application &self);
+
 		void displayHelp();
 
 		void handleHelp(const std::string& name, const std::string& value);
