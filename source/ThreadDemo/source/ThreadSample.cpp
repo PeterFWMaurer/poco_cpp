@@ -9,6 +9,7 @@
 
 #include "Poco/Any.h"
 #include "Poco/ActiveMethod.h"
+#include "Poco/RunnableAdapter.h"
 #include "Poco/Thread.h"
 #include "Poco/Types.h"
 
@@ -16,8 +17,10 @@ namespace ThreadDemo
 {
 	using Poco::Thread;
 	using Poco::Runnable;
+	using Poco::RunnableAdapter;
 	using Poco::ActiveMethod;
 	using Poco::ActiveResult;
+
 
 	class SimpleRunnable : public Runnable
 	{
@@ -103,6 +106,13 @@ namespace ThreadDemo
 		// Auf den Abschluss des Thread warten
 		mySimpleThread.join();
 
+
+		// Diesmal lassen wir in unserem Thread unseren ThreadInfoPrinter mit Hilfe des RunnableAdadpters laufen
+		ThreadInfoPrinter myPrinter(os);
+		RunnableAdapter<ThreadInfoPrinter> myPrinterAdapter(myPrinter,&ThreadInfoPrinter::print);
+		mySimpleThread.start(myPrinterAdapter);
+		mySimpleThread.join();
+
 		// Wir lassen den Thread erneut laufen, diesmal mit einer Lambda Funktion
 		mySimpleThread.startFunc([&os]()
 				{
@@ -113,7 +123,7 @@ namespace ThreadDemo
 		mySimpleThread.join();
 
 		// Jetzt erzeugen wir unser SimpleActiveObject und rufen unsere
-		// Methode auf:
+		// ActiveMethode auf:
 		SimpleActiveObject myActiveObject;
 		ActiveResult<int> result=myActiveObject.activeDoSmt(os);
 		result.wait();

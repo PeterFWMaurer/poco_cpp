@@ -5,7 +5,9 @@ string(CONCAT TEST_NAME "test_" ${LIB_NAME})
 
 set(LIB_SOURCES
     source/ThreadSample.cpp
+    source/ThreadPoolSample.cpp
     source/ThreadDemoSub.cpp
+    source/MutexSample.cpp
 )
 
 set(TEST_SOURCES

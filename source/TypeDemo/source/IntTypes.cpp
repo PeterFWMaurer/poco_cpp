@@ -7,6 +7,8 @@
 
 #include "TypeDemo/IntTypes.h"
 
+#include "Poco/Types.h"
+
 namespace TypeDemo
 {
 	void IntTypes::run(std::ostream &os,std::istream &is)

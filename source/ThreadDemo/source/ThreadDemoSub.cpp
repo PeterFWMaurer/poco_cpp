@@ -7,6 +7,8 @@
 
 #include "ThreadDemo/ThreadDemoSub.h"
 #include "ThreadDemo/ThreadSample.h"
+#include "ThreadDemo/ThreadPoolSample.h"
+#include "ThreadDemo/MutexSample.h"
 
 namespace ThreadDemo
 {
@@ -14,5 +16,7 @@ namespace ThreadDemo
 		SampleSub("ThreadDemoSub")
 	{
 		addSample(new ThreadSample());
+		addSample(new ThreadPoolSample());
+		addSample(new MutexSample());
 	}
 }
