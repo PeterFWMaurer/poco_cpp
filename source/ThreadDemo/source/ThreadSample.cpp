@@ -9,6 +9,7 @@
 
 #include "Poco/Any.h"
 #include "Poco/ActiveMethod.h"
+#include "Poco/Activity.h"
 #include "Poco/RunnableAdapter.h"
 #include "Poco/Thread.h"
 #include "Poco/Types.h"
@@ -20,6 +21,7 @@ namespace ThreadDemo
 	using Poco::RunnableAdapter;
 	using Poco::ActiveMethod;
 	using Poco::ActiveResult;
+	using Poco::Activity;
 
 
 	class SimpleRunnable : public Runnable
@@ -71,6 +73,45 @@ namespace ThreadDemo
 			ThreadSample::printThreadInfo(os);
 			return 42;
 		}
+	};
+
+	class ObjectWithActivity
+	{
+	public:
+		ObjectWithActivity(std::ostream& os):
+			_myActivity(this,&ObjectWithActivity::runMyActivity),
+			_os(os)
+		{}
+
+		virtual ~ObjectWithActivity(){}
+
+		void startMyActivity()
+		{
+			_myActivity.start();
+		}
+
+		void stopMyActivity()
+		{
+			_myActivity.stop();
+			_myActivity.wait();
+		}
+
+	protected:
+		void runMyActivity()
+		{
+			_os<<"Running Activity in Thread:"<<std::endl;
+			ThreadSample::printThreadInfo(_os);
+			while (!_myActivity.isStopped())
+			{
+				_os<<"."<<std::flush;
+				Thread::sleep(100);
+			}
+			_os<<std::endl;
+		}
+
+	private:
+		Activity<ObjectWithActivity> _myActivity;
+		std::ostream& _os;
 	};
 
 	void ThreadSample::printThreadInfo(std::ostream& os)
@@ -128,6 +169,14 @@ namespace ThreadDemo
 		ActiveResult<int> result=myActiveObject.activeDoSmt(os);
 		result.wait();
 		os<<"Result of our active method: "<<result.data()<<std::endl;
+
+		// Jetzt erzeugen wir unser ObjectWithActivity und starten unsere Activity
+		ObjectWithActivity myObjectWithActivity(os);
+		myObjectWithActivity.startMyActivity();
+		Thread::sleep(1200);
+		myObjectWithActivity.stopMyActivity();
+
+
 
 
 	}
