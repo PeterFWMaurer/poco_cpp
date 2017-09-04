@@ -11,6 +11,7 @@
 #include "ThreadDemo/MutexSample.h"
 #include "ThreadDemo/EventSample.h"
 #include "ThreadDemo/ConditionSample.h"
+#include "ThreadDemo/SynchronizedSample.h"
 
 namespace ThreadDemo
 {
@@ -22,5 +23,6 @@ namespace ThreadDemo
 		addSample(new MutexSample());
 		addSample(new EventSample());
 		addSample(new ConditionSample());
+		addSample(new SynchronizedSample());
 	}
 }

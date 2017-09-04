@@ -10,6 +10,7 @@ set(LIB_SOURCES
     source/ThreadSample.cpp
     source/ThreadPoolSample.cpp
     source/ThreadDemoSub.cpp
+    source/SynchronizedSample.cpp
 )
 
 set(TEST_SOURCES
