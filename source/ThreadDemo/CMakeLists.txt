@@ -4,6 +4,7 @@ set(LIB_NAME ThreadDemo)
 string(CONCAT TEST_NAME "test_" ${LIB_NAME})
 
 set(LIB_SOURCES
+	source/EventSample.cpp
     source/ThreadSample.cpp
     source/ThreadPoolSample.cpp
     source/ThreadDemoSub.cpp

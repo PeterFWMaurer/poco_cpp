@@ -10,6 +10,8 @@
 #include "Poco/Mutex.h"
 #include "Poco/ScopedLock.h"
 #include "Poco/StringTokenizer.h"
+#include "Poco/Timespan.h"
+#include "Poco/Timestamp.h"
 
 #include <algorithm>
 #include <iterator>
@@ -24,6 +26,8 @@ namespace ThreadDemo
 	using Poco::Mutex;
 	using Poco::ScopedLock;
 	using Poco::StringTokenizer;
+	using Poco::Timespan;
+	using Poco::Timestamp;
 	using std::copy;
 	using std::string;
 	using std::vector;
@@ -80,11 +84,18 @@ namespace ThreadDemo
 
 		virtual ~Name(){}
 
-		void append(string SubName)
+		void append(string subName)
 		{
 			Mutex::ScopedLock lock(_nameMutex);
-			StringTokenizer tokenizer(SubName,":");
+			StringTokenizer tokenizer(subName,":");
 			copy(tokenizer.begin(),tokenizer.end(),std::back_inserter(_nameParts));
+		}
+
+		void replace(string subName)
+		{
+			Mutex::ScopedLock lock(_nameMutex);
+			_nameParts.clear();
+			append(subName);
 		}
 
 		void print(std::ostream& os)
@@ -98,17 +109,50 @@ namespace ThreadDemo
 		Mutex _nameMutex;
 	};
 
+	template <typename MutexPolicy>
+	class MutexPerformanceMeasurement
+	{
+	public:
+		MutexPerformanceMeasurement(){}
+
+		virtual ~MutexPerformanceMeasurement(){}
+
+		Timespan testLockPerformance(int count)
+		{
+			Timestamp beforeLock;
+			for (int i=0;i<count;i++)
+			{
+				typename MutexPolicy::ScopedLock lock(_mutex);
+			}
+			return Timespan(beforeLock.elapsed());
+		}
+	private:
+		MutexPolicy _mutex;
+
+	};
+
 	void MutexSample::run(std::ostream& os, std::istream& is)
 	{
 		Powers myPowers(2);
-		std::cout<<myPowers.getPower(5)<<std::endl;
 
-		Name myName("Test:Name:Lang");
-		os<<"test1"<<std::endl;
-		myName.append("Geht:Das");
-		os<<"test1"<<std::endl;
+		Name myName("Ein:Test:Name");
+		myName.append("Kann:Erweitert:werden");
+		myName.replace("Mein:Namens:Ersatz");
 		myName.print(os);
 		os<<std::endl;
+
+		const int repeatCount = 100000;
+
+		// Der folgende Performancetest sollte fuer Posixsysteme keinen nennenswerten
+		// Unterschied zwischen Mutex und Fastmutex aufzeigen.
+
+		MutexPerformanceMeasurement<FastMutex> fastMutexTest;
+		Timespan fastMutexTime = fastMutexTest.testLockPerformance(repeatCount);
+		std::cout<<"Time for "<<repeatCount<<" fast mutex locks: "<<fastMutexTime.microseconds()<<"µs"<<std::endl;
+
+		MutexPerformanceMeasurement<Mutex> mutexTest;
+		Timespan mutexTime = mutexTest.testLockPerformance(repeatCount);
+		std::cout<<"Time for "<<repeatCount<<" normal mutex locks: "<<mutexTime.microseconds()<<"µs"<<std::endl;
 	}
 
 } /* namespace ThreadDemo */

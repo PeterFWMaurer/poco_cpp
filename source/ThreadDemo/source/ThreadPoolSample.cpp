@@ -24,6 +24,9 @@ namespace ThreadDemo {
 	using Poco::Timestamp;
 	using std::vector;
 
+	// Die Klasse Worker dient in unserem Beispiel als Runnable - ihrer einzige Aufgabe
+	// ist es, einen definierten Zeitraum im Thread zu verbleiben.
+	//
 	class Worker : public Runnable
 	{
 	public:
@@ -33,11 +36,7 @@ namespace ThreadDemo {
 
 		void run()
 		{
-			for (int i=0;i<std::numeric_limits<int>::max();i++)
-			{
-				for (int j = 0; j<1000; j++)
-				{}
-			}
+			Thread::sleep(100);
 		}
 	};
 
@@ -110,7 +109,7 @@ namespace ThreadDemo {
 		Timespan simpleThreadSpan = createThreadsWithSimpleThreads(noOfThreads);
 
 		std::cout<<"Creation of Threads:"<<std::endl
-				 <<noOfThreads<<" Threads withoyt preallocation of Threads in ThreadPool: "<<noPreallocPoolSpan.microseconds()<<"µs"<<std::endl
+				 <<noOfThreads<<" Threads without preallocation of Threads in ThreadPool: "<<noPreallocPoolSpan.microseconds()<<"µs"<<std::endl
 				 <<noOfThreads<<" Threads with preallocated threads in ThreadPool:        "<<preallocPoolSpan.microseconds()<<"µs"<<std::endl
 				 <<noOfThreads<<" Threads not using ThradPool:                            "<<simpleThreadSpan.microseconds()<<"µs"<<std::endl;
 	}
