@@ -12,6 +12,7 @@ set(LIB_SOURCES
     source/ThreadDemoSub.cpp
     source/SynchronizedSample.cpp
     source/SemaphoreSample.cpp
+    source/ErrorSample.cpp
 )
 
 set(TEST_SOURCES

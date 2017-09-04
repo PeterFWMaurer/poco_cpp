@@ -13,6 +13,7 @@
 #include "ThreadDemo/ConditionSample.h"
 #include "ThreadDemo/SynchronizedSample.h"
 #include "ThreadDemo/SemaphoreSample.h"
+#include "ThreadDemo/ErrorSample.h"
 
 namespace ThreadDemo
 {
@@ -26,5 +27,6 @@ namespace ThreadDemo
 		addSample(new ConditionSample());
 		addSample(new SynchronizedSample());
 		addSample(new SemaphoreSample());
+		addSample(new ErrorSample());
 	}
 }
