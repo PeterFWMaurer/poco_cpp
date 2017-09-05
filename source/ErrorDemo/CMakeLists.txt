@@ -6,6 +6,8 @@ string(CONCAT TEST_NAME "test_" ${LIB_NAME})
 set(LIB_SOURCES
     source/ErrorDemoSub.cpp
     source/ExceptionSample.cpp
+    source/AssertionSample.cpp
+    source/NdcSample.cpp
 )
 
 set(TEST_SOURCES
