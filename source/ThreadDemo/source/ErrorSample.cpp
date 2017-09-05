@@ -12,6 +12,8 @@
 #include "Poco/Runnable.h"
 #include "Poco/Thread.h"
 
+#include <typeinfo>
+
 namespace ThreadDemo
 {
 	using Poco::ErrorHandler;
@@ -19,15 +21,10 @@ namespace ThreadDemo
 	using Poco::Runnable;
 	using Poco::Thread;
 
-	class ErrorSampleException: public Exception
-	{
-	public:
-		ErrorSampleException():
-			Exception("Error Sample Exception")
-		{}
 
-		virtual ~ErrorSampleException(){}
-	};
+	POCO_DECLARE_EXCEPTION(,ErrorSampleException,Poco::Exception);
+
+	POCO_IMPLEMENT_EXCEPTION(ErrorSampleException, Poco::Exception, "Example Thread threw Exception");
 
 	class ExceptionRunner : public Runnable
 	{
@@ -50,9 +47,14 @@ namespace ThreadDemo
 
 	class SampleErrorHandler : public Poco::ErrorHandler
 	{
+	public:
+		SampleErrorHandler(){}
+
+		virtual ~SampleErrorHandler(){}
+
 		void excpetion(const Exception &exp)
 		{
-			std::cout<<exp.displayText()<<" in thread (id = "<<Thread::current()->id()<<")"<<std::endl;
+			std::cout/*<<exp.displayText()*/<<" in thread (id = "<<Thread::current()->id()<<")"<<std::endl;
 		}
 
 		void exception(const std::exception &exp)
