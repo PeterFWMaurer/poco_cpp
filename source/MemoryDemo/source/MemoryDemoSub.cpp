@@ -7,6 +7,7 @@
 
 #include "MemoryDemo/MemoryDemoSub.h"
 #include "MemoryDemo/RefCountingSample.h"
+#include "MemoryDemo/AutoPtrSample.h"
 
 namespace MemoryDemo
 {
@@ -14,5 +15,6 @@ namespace MemoryDemo
 		:SampleSubsystem::SampleSub("MemoryDemo")
 	{
 		addSample(new RefCountingSample());
+		addSample(new AutoPtrSample());
 	}
 } /* namespace MemoryDemo */
