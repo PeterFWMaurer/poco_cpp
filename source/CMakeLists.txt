@@ -26,6 +26,7 @@ message(DEBUG " POCO_INCLUDE_DIRS " ${POCO_INCLUDE_DIRS})
 include_directories(
    SampleSubsystem/include
    TypeDemo/include
+   ErrorDemo/include
    ThreadDemo/include
    ${CMAKE_PREFIX_PATH/inlclude}
 )
@@ -35,6 +36,7 @@ add_subdirectory(PocoSample)
 
 add_subdirectory(SampleSubsystem)
 add_subdirectory(TypeDemo)
+add_subdirectory(ErrorDemo)
 add_subdirectory(ThreadDemo)
 add_subdirectory(FoundationSample)
 

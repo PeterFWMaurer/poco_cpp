@@ -24,6 +24,7 @@ target_link_libraries(${APP_NAME}
     SampleSubsystem
     TypeDemo
     ThreadDemo
+    ErrorDemo
     Poco::Foundation
     Poco::Util
 )

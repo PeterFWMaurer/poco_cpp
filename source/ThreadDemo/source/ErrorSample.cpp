@@ -54,7 +54,8 @@ namespace ThreadDemo
 
 		void excpetion(const Exception &exp)
 		{
-			std::cout/*<<exp.displayText()*/<<" in thread (id = "<<Thread::current()->id()<<")"<<std::endl;
+			std::cout<<"Handled Exceoption from thread"<<std::endl;
+			//std::cout/*<<exp.displayText()*/<<" in thread (id = "<<Thread::current()->id()<<")"<<std::endl;
 		}
 
 		void exception(const std::exception &exp)

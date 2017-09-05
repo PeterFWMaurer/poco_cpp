@@ -9,6 +9,7 @@
 
 #include "TypeDemo/TypeDemoSub.h"
 #include "ThreadDemo/ThreadDemoSub.h"
+#include "ErrorDemo/ErrorDemoSub.h"
 
 
 #include <iostream>
@@ -29,6 +30,7 @@ namespace FoundationSample
 {
 
 	using TypeDemo::TypeDemoSub;
+	using ErrorDemo::ErrorDemoSub;
 	using ThreadDemo::ThreadDemoSub;
 	using SampleSubsystem::SampleSub;
 
@@ -36,7 +38,8 @@ namespace FoundationSample
 			_helpRequested(false)
 	{
 		addSubsystem(new TypeDemoSub());
-		addSubsystem(new ThreadDemoSub());
+		addSubsystem(new ErrorDemoSub());
+	//	addSubsystem(new ThreadDemoSub());
 	//	SampleSubsystem::SampleSub *pS=new SampleSubsystem::SampleSub("Hallo");
 	//	addSubsystem(new TestSubsystem);
 	}
