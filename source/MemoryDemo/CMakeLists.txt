@@ -5,6 +5,7 @@ string(CONCAT TEST_NAME "test_" ${LIB_NAME})
 
 set(LIB_SOURCES
     source/MemoryDemoSub.cpp
+    source/RefCountingSample.cpp
 )
 
 set(TEST_SOURCES
