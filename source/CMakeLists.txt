@@ -18,16 +18,29 @@ find_package(Poco REQUIRED COMPONENTS
     Util
 )
 
-message(DEBUG " POCO_FOUNDATION_FOUND " ${POCO_FOUNDATION_FOUND})
-message(DEBUG " POCO_FOUNDATION_LIBRARY " ${POCO_FOUNDATION_LIBRARY})
+message(DEBUG " CONFIG " ${CONFIG})
 
-message(DEBUG " POCO_INCLUDE_DIRS " ${POCO_INCLUDE_DIRS})
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -D_DEBUG")
+
+message(STATUS "C_FLAGS:  =${CMAKE_C_FLAGS}")
+message(STATUS "CMAKE_C_FLAGS_DEBUG:=${CMAKE_C_FLAGS_DEBUG}")
+message(STATUS "CMAKE_C_FLAGS_RELEASE:=${CMAKE_C_FLAGS_RELEASE}")
+message(STATUS "CMAKE_C_FLAGS_MINSIZEREL:=${CMAKE_C_FLAGS_MINSIZEREL}")
+message(STATUS "CMAKE_C_FLAGS_RELWITHDEBINFO:=${CMAKE_C_FLAGS_RELWITHDEBINFO}")
+message(STATUS "")
+message(STATUS "")
+message(STATUS "CXX_FLAGS:=${CMAKE_CXX_FLAGS}")
+message(STATUS "CMAKE_CXX_FLAGS_DEBUG:=${CMAKE_CXX_FLAGS_DEBUG}")
+message(STATUS "CMAKE_CXX_FLAGS_RELEASE:=${CMAKE_CXX_FLAGS_RELEASE}")
+message(STATUS "CMAKE_CXX_FLAGS_MINSIZEREL:=${CMAKE_CXX_FLAGS_MINSIZEREL}")
+message(STATUS "CMAKE_CXX_FLAGS_RELWITHDEBINFO:=${CMAKE_CXX_FLAGS_RELWITHDEBINFO}")
 
 include_directories(
    SampleSubsystem/include
    TypeDemo/include
    ErrorDemo/include
    ThreadDemo/include
+   MemoryDemo/include
    ${CMAKE_PREFIX_PATH/inlclude}
 )
 
@@ -37,6 +50,7 @@ add_subdirectory(PocoSample)
 add_subdirectory(SampleSubsystem)
 add_subdirectory(TypeDemo)
 add_subdirectory(ErrorDemo)
+add_subdirectory(MemoryDemo)
 add_subdirectory(ThreadDemo)
 add_subdirectory(FoundationSample)
 
