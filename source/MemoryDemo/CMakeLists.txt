@@ -7,6 +7,7 @@ set(LIB_SOURCES
     source/MemoryDemoSub.cpp
     source/RefCountingSample.cpp
     source/AutoPtrSample.cpp
+    source/SharedPtrSample.cpp
 )
 
 set(TEST_SOURCES

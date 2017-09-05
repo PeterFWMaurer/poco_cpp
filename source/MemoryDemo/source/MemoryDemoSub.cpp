@@ -8,6 +8,7 @@
 #include "MemoryDemo/MemoryDemoSub.h"
 #include "MemoryDemo/RefCountingSample.h"
 #include "MemoryDemo/AutoPtrSample.h"
+#include "MemoryDemo/SharedPtrSample.h"
 
 namespace MemoryDemo
 {
@@ -16,5 +17,6 @@ namespace MemoryDemo
 	{
 		addSample(new RefCountingSample());
 		addSample(new AutoPtrSample());
+		addSample(new SharedPtrSample());
 	}
-} /* namespace MemoryDemo */
+}
