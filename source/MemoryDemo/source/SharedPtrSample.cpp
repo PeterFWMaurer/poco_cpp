@@ -9,6 +9,9 @@
 
 #include "Poco/SharedPtr.h"
 
+#include <algorithm>
+#include <iterator>
+
 namespace MemoryDemo
 {
 	using Poco::SharedPtr;
@@ -52,9 +55,18 @@ namespace MemoryDemo
 			}
 		}
 
-		SharedPtr<BaseSmp,ReferenceCounter,ReleaseArrayPolicy<BaseSmp>> pBaseArray(new BaseSmp[10]);
-		pBaseArray[1]=pBaseArray[2];
-
+		const int INT_ARRAY_LEN=10;
+		SharedPtr<int,ReferenceCounter,ReleaseArrayPolicy<int>> pIntArray(new int[INT_ARRAY_LEN]);
+		for (int i=0; i<INT_ARRAY_LEN; i++)
+		{
+			pIntArray[i]=i;
+		}
+		// The following code is commented out, since it shows what happens, if two SharedPtr try to possess
+		// the same raw pointer. The application will crash...
+		//
+		// int * rpI=new int(42);
+		// SharedPtr<int>pI1(rpI);
+		// SharedPtr<int>pI2(rpI);
 	}
 
 } /* namespace MemoryDemo */

@@ -41,6 +41,7 @@ include_directories(
    ErrorDemo/include
    ThreadDemo/include
    MemoryDemo/include
+   EventDemo/include
    ${CMAKE_PREFIX_PATH/inlclude}
 )
 
@@ -52,5 +53,6 @@ add_subdirectory(TypeDemo)
 add_subdirectory(ErrorDemo)
 add_subdirectory(MemoryDemo)
 add_subdirectory(ThreadDemo)
+add_subdirectory(EventDemo)
 add_subdirectory(FoundationSample)
 

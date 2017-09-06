@@ -1,15 +1,10 @@
 include_directories(include)
 
-set(LIB_NAME MemoryDemo)
+set(LIB_NAME EventDemo)
 string(CONCAT TEST_NAME "test_" ${LIB_NAME})
 
 set(LIB_SOURCES
-    source/MemoryDemoSub.cpp
-    source/RefCountingSample.cpp
-    source/AutoPtrSample.cpp
-    source/SharedPtrSample.cpp
-    source/BufferSample.cpp
-    source/PoolSample.cpp
+    source/EventDemoSub.cpp
 )
 
 set(TEST_SOURCES

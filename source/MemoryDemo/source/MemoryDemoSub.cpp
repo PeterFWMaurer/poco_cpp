@@ -9,6 +9,8 @@
 #include "MemoryDemo/RefCountingSample.h"
 #include "MemoryDemo/AutoPtrSample.h"
 #include "MemoryDemo/SharedPtrSample.h"
+#include "MemoryDemo/BufferSample.h"
+#include "MemoryDemo/PoolSample.h"
 
 namespace MemoryDemo
 {
@@ -18,5 +20,7 @@ namespace MemoryDemo
 		addSample(new RefCountingSample());
 		addSample(new AutoPtrSample());
 		addSample(new SharedPtrSample());
+		addSample(new BufferSample());
+		addSample(new PoolSample());
 	}
 }
