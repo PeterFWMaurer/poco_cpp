@@ -45,7 +45,7 @@ namespace FoundationSample
 		addSubsystem(new ErrorDemoSub());
 		addSubsystem(new MemoryDemoSub());
 		addSubsystem(new EventDemoSub());
-		addSubsystem(new ThreadDemoSub());
+		// addSubsystem(new ThreadDemoSub());
 	//	SampleSubsystem::SampleSub *pS=new SampleSubsystem::SampleSub("Hallo");
 	//	addSubsystem(new TestSubsystem);
 	}
