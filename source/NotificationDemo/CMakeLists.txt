@@ -6,6 +6,7 @@ string(CONCAT TEST_NAME "test_" ${LIB_NAME})
 set(LIB_SOURCES
     source/NotificationDemoSub.cpp
     source/SimpleNotificationSample.cpp
+    source/NotificationQueueSample.cpp
 )
 
 set(TEST_SOURCES

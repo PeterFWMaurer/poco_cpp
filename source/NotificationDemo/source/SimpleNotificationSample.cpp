@@ -12,7 +12,6 @@
 #include "Poco/NotificationCenter.h"
 #include "Poco/NObserver.h"
 #include "Poco/Observer.h"
-#include "Poco/String.h"
 
 namespace NotificationDemo
 {
