@@ -7,53 +7,14 @@
 
 #include "EventDemo/SimpleEventSample.h"
 #include "EventDemo/SampleEventInfo.h"
+#include "EventDemo/SampleEventSource.h"
+#include "EventDemo/SampleEventTarget.h"
 
 #include "Poco/BasicEvent.h"
 #include "Poco/Delegate.h"
 
 namespace EventDemo
 {
-	using Poco::BasicEvent;
-
-
-	class SampleEventSource
-	{
-	public:
-		typedef BasicEvent<SampleEvtInfo> SampleEvent;
-
-		SampleEvent event;
-
-		SampleEventSource(){}
-
-		virtual ~SampleEventSource(){}
-
-		void fireSampleEvent(SampleEvtInfo& evi)
-		{
-			//event(this,evi);
-			event.notify(this,evi);
-		}
-	};
-
-	class SampleEventTarget
-	{
-	public:
-		SampleEventTarget(const std::string& name, std::ostream& os):
-			_name(name),
-			_os(os)
-		{}
-
-		virtual ~SampleEventTarget(){}
-
-		void onSampleEvent(const void *pSender,SampleEvtInfo& evt)
-		{
-			_os<<"Target "<<_name<<" received Event "<<evt.name()<<" increasing its count."<<std::endl;
-			++evt;
-		}
-
-	private:
-		std::string _name;
-		std::ostream& _os;
-	};
 
 	void SimpleEventSample::run(std::ostream& os, std::istream& is)
 	{
