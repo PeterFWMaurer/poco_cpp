@@ -47,8 +47,6 @@ include_directories(
 )
 
 
-add_subdirectory(PocoSample)
-
 add_subdirectory(SampleSubsystem)
 add_subdirectory(TypeDemo)
 add_subdirectory(ErrorDemo)
