@@ -33,6 +33,5 @@ namespace EventDemo
 		Thread::sleep(2000);
 		mySource.fireSampleEvent(evtData);
 		os<<"Fired again after 2000ms sleep!"<<std::endl;
-
 	}
 }

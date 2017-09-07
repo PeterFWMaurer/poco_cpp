@@ -12,6 +12,7 @@
 #include "ErrorDemo/ErrorDemoSub.h"
 #include "MemoryDemo/MemoryDemoSub.h"
 #include "EventDemo/EventDemoSub.h"
+#include "NotificationDemo/NotificationDemoSub.h"
 
 
 #include <iostream>
@@ -37,6 +38,7 @@ namespace FoundationSample
 	using ThreadDemo::ThreadDemoSub;
 	using SampleSubsystem::SampleSub;
 	using EventDemo::EventDemoSub;
+	using NotificationDemo::NotificationDemoSub;
 
 	SampleApp::SampleApp():
 			_helpRequested(false)
@@ -45,6 +47,7 @@ namespace FoundationSample
 		addSubsystem(new ErrorDemoSub());
 		addSubsystem(new MemoryDemoSub());
 		addSubsystem(new EventDemoSub());
+		addSubsystem(new NotificationDemoSub());
 		// addSubsystem(new ThreadDemoSub());
 	//	SampleSubsystem::SampleSub *pS=new SampleSubsystem::SampleSub("Hallo");
 	//	addSubsystem(new TestSubsystem);

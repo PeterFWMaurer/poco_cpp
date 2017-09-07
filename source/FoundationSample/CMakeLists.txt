@@ -27,6 +27,7 @@ target_link_libraries(${APP_NAME}
     ErrorDemo
     MemoryDemo
     EventDemo
+    NotificationDemo
     Poco::Foundation
     Poco::Util
 )
