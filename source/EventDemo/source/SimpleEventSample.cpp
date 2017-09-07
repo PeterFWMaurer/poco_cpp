@@ -6,6 +6,7 @@
  */
 
 #include "EventDemo/SimpleEventSample.h"
+#include "EventDemo/SampleEventInfo.h"
 
 #include "Poco/BasicEvent.h"
 #include "Poco/Delegate.h"
@@ -14,38 +15,6 @@ namespace EventDemo
 {
 	using Poco::BasicEvent;
 
-	class SampleEvtInfo
-	{
-	public:
-
-
-		SampleEvtInfo(const std::string &name):
-			_count(0),
-			_name(name)
-		{}
-
-		virtual ~SampleEvtInfo()
-		{}
-
-		int count()
-		{
-			return _count;
-		}
-
-		const std::string& name()
-		{
-			return _name;
-		}
-
-		int operator ++()
-		{
-			return ++_count;
-		}
-
-	private:
-		int _count;
-		std::string _name;
-	};
 
 	class SampleEventSource
 	{

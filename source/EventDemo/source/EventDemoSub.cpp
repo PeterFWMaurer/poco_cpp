@@ -8,15 +8,17 @@
 #include "EventDemo/EventDemoSub.h"
 
 #include "EventDemo/SimpleEventSample.h"
+#include "EventDemo/AsyncEventSample.h"
+#include "EventDemo/ExpireDelegateSample.h"
 
 namespace EventDemo
 {
-	using EventDemo::SimpleEventSample;
-
 	EventDemoSub::EventDemoSub():
 		SampleSub("EvnetDemoSub")
 	{
 		addSample(new SimpleEventSample());
+		addSample(new AsyncEventSample());
+		addSample(new ExpireDelegateSample());
 	}
 
 }

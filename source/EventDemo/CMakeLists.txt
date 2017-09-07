@@ -6,6 +6,8 @@ string(CONCAT TEST_NAME "test_" ${LIB_NAME})
 set(LIB_SOURCES
     source/EventDemoSub.cpp
     source/SimpleEventSample.cpp
+    source/AsyncEventSample.cpp
+    source/ExpireDelegateSample.cpp
 )
 
 set(TEST_SOURCES
