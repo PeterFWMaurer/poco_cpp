@@ -56,3 +56,5 @@ add_subdirectory(EventDemo)
 add_subdirectory(NotificationDemo)
 add_subdirectory(FoundationSample)
 
+add_subdirectory(ApplicationDemo)
+
