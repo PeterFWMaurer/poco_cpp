@@ -8,6 +8,7 @@
 #include "NotificationDemo/NotificationDemoSub.h"
 #include "NotificationDemo/SimpleNotificationSample.h"
 #include "NotificationDemo/NotificationQueueSample.h"
+#include "NotificationDemo/PriorityNQSample.h"
 
 namespace NotificationDemo {
 
@@ -16,6 +17,7 @@ NotificationDemoSub::NotificationDemoSub():
 {
 	addSample(new SimpleNotificationSample());
 	addSample(new NotificationQueueSample());
+	addSample(new PriorityNQSample());
 }
 
 } /* namespace NotificationDemo */

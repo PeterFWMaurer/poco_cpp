@@ -7,6 +7,7 @@ set(LIB_SOURCES
     source/NotificationDemoSub.cpp
     source/SimpleNotificationSample.cpp
     source/NotificationQueueSample.cpp
+    source/PriorityNQSample.cpp
 )
 
 set(TEST_SOURCES
