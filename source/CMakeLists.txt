@@ -59,3 +59,5 @@ add_subdirectory(FoundationSample)
 
 add_subdirectory(ApplicationDemo)
 
+add_subdirectory(ServerDemo)
+
