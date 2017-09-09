@@ -16,6 +16,7 @@ include_directories(
 find_package(Poco REQUIRED COMPONENTS 
     Foundation
     Util
+    Net
 )
 
 message(DEBUG " CONFIG " ${CONFIG})

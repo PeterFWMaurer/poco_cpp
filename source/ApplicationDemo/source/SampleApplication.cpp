@@ -59,7 +59,7 @@ namespace ApplicationDemo
 	{
 		loadConfiguration();
 		Application::initialize(self);
-		logger().information("initializing");
+		logger().debug("initializing");
 	}
 
 	void SampleApplication::defineOptions(OptionSet &options)
@@ -94,11 +94,15 @@ namespace ApplicationDemo
 	{
 		if (!_helpRequested)
 		{
-			logger().information("Sample Application started");
-			LogStream rootLogStream(logger());
-			rootLogStream.information()<<"Test"<<std::endl;
-			rootLogStream.warning()<<"test"<<std::endl;
-        		}
+			LogStream logStream(logger());
+			logStream.information()<<"Sample Application started"<<std::endl;
+
+			DemoClient& demoClient = getSubsystem<DemoClient>();
+			if (demoClient.configured())
+			{
+				demoClient.run();
+			}
+		}
 		return Application::EXIT_OK;
 	}
 }

@@ -6,6 +6,7 @@ string(CONCAT TEST_NAME "test_" ${LIB_NAME})
 
 set(APP_SOURCES
     source/SampleApplication.cpp
+    source/DemoClient.cpp
  )
 
 set(TEST_SOURCES
@@ -23,6 +24,7 @@ set_property(TARGET ${APP_NAME} PROPERTY CXX_STANDARD 14)
 target_link_libraries(${APP_NAME} 
     Poco::Foundation
     Poco::Util
+    Poco::Net
 )
 
 install(TARGETS ${APP_NAME} 
