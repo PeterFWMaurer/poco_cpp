@@ -1,8 +1,11 @@
 /*
  * BufferSample.cpp
  *
- *  Created on: Sep 6, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel für die Verwendung von Poco::Buffer
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "MemoryDemo/BufferSample.h"
@@ -19,11 +22,12 @@ namespace MemoryDemo
 
 	void BufferSample::run(std::ostream& os, std::istream& is)
 	{
+		// Buffer der Länge 100 erzeugen und füllen
 		Buffer<char> buf(100);
-
 		std::fill(buf.begin(),buf.end(),'a');
 		buf[10]='z';
 
+		// Buffer prüft Bereichsüberschreitungen
 		try
 		{
 			buf[120]='y';
@@ -33,6 +37,7 @@ namespace MemoryDemo
 			os<<exp.displayText()<<std::endl;
 		}
 
+		// Buffer können in C++ Algorithmen verwendet werden
 		std::copy(buf.begin(),buf.end(),std::ostreambuf_iterator<char>(os));
 		os<<std::endl;
 

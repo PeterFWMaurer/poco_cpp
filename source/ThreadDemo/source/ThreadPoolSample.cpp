@@ -1,8 +1,11 @@
 /*
  * ThreadPoolSample.cpp
  *
- *  Created on: Sep 1, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel, das die Verwendung von Poco::Event illustriert.
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "ThreadDemo/ThreadPoolSample.h"

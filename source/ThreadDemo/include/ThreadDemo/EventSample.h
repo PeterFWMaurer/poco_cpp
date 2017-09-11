@@ -1,8 +1,11 @@
 /*
  * EventSample.h
  *
- *  Created on: Sep 2, 2017
- *      Author: parallels
+ * Author: Peter Maurer
+ *
+ * Beispiel, das die Verwendung von Poco::Mutex illustriert.
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef THREADDEMO_SOURCE_EVENTSAMPLE_H_

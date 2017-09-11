@@ -1,8 +1,11 @@
 /*
  * RefCountingSample.h
  *
- *  Created on: Sep 5, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel für ein von Hand implementiertes Objekt mit Referenzzählung
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef MEMORYDEMO_SOURCE_REFCOUNTINGSAMPLE_H_

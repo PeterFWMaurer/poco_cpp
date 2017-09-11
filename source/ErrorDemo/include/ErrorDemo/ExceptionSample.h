@@ -1,8 +1,12 @@
 /*
  * ExceptionSample.h
  *
- *  Created on: Sep 5, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Dieses Beispiel zeigt den Umgang mit Poco::Exception und der entsprechenden
+ * Vererbungshierarchie
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef ERRORDEMO_SOURCE_EXCEPTIONSAMPLE_H_

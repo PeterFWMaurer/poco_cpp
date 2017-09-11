@@ -1,8 +1,11 @@
 /*
  * ErrorDemoSub.h
  *
- *  Created on: Sep 5, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Klasse zum Aufruf von Beispielen zum Thema Error und Exception
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef ERRORDEMO_SOURCE_ERRORDEMOSUB_H_

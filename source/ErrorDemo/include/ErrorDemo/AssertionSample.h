@@ -1,8 +1,11 @@
 /*
  * AssertionSample.h
  *
- *  Created on: Sep 5, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Dieses Beispiel zeigt den Umgang mit den Poco-eigenen assertions.
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef ERRORDEMO_SOURCE_ASSERTIONSAMPLE_H_

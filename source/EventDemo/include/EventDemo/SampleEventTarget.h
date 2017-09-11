@@ -1,8 +1,11 @@
 /*
  * SampleEventTarget.h
  *
- *  Created on: Sep 7, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel für ein Eventtarget
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef EVENTDEMO_INCLUDE_EVENTDEMO_SAMPLEEVENTTARGET_H_
@@ -15,9 +18,11 @@
 
 namespace EventDemo
 {
+	// Eine Beliebige Klasse kann Events verarbeiten
 	class SampleEventTarget
 	{
 	public:
+		// Unser Target erhält einen Namen, damit wir es erkennen.
 		SampleEventTarget(const std::string& name, std::ostream& os):
 			_name(name),
 			_os(os)
@@ -25,6 +30,8 @@ namespace EventDemo
 
 		virtual ~SampleEventTarget(){}
 
+		// Ein Target muss eine Funktion zum Verarbeiten des Events haben. Das Event wird by reference übertragen und kann
+		// verändert werden.
 		void onSampleEvent(const void *pSender,SampleEvtInfo& evt)
 		{
 			_os<<"Target "<<_name<<" received Event "<<evt.name()<<" increasing its count."<<std::endl;

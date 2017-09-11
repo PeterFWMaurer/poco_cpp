@@ -1,8 +1,11 @@
 /*
  * TypeDemoSub.cpp
  *
- *  Created on: Aug 24, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Sample class for Poco thread samples
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "ThreadDemo/ThreadDemoSub.h"
@@ -21,12 +24,12 @@ namespace ThreadDemo
 		SampleSub("ThreadDemoSub")
 	{
 		addSample(new ThreadSample());
-		// addSample(new ThreadPoolSample());
 		addSample(new MutexSample());
 		addSample(new EventSample());
 		addSample(new ConditionSample());
 		addSample(new SynchronizedSample());
 		addSample(new SemaphoreSample());
-		addSample(new ErrorSample());
+		addSample(new ThreadPoolSample());
+//		addSample(new ErrorSample());
 	}
 }

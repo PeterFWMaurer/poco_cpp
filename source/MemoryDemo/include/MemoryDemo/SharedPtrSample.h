@@ -1,8 +1,11 @@
 /*
  * SharedPtrSample.h
  *
- *  Created on: Sep 5, 2017
- *      Author: parallels
+ * Author: Peter Maurer
+ *
+ * Beispiel für die Verwendung von Poco::SharedPtr
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef MEMORYDEMO_SOURCE_SHAREDPTRSAMPLE_H_

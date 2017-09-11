@@ -1,8 +1,7 @@
 /*
  * DemoClient.cpp
  *
- *  Created on: Sep 8, 2017
- *      Author: peter
+  *      Author: Peter Maurer
  */
 
 #include "ApplicationDemo/DemoClient.h"

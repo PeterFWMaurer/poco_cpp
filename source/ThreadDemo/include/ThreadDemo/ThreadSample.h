@@ -1,8 +1,11 @@
 /*
  * AnySample.h
  *
- *  Created on: Aug 25, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel, das verschiedenen Arten zeigt, wie Threads in Poco implementiert werden können
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef TYPEDEMO_INCLUDE_THREADDEMO_THREADSAMPLE_H_

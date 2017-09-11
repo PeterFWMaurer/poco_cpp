@@ -1,8 +1,11 @@
 /*
  * NdcSample.h
  *
- *  Created on: Sep 5, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Dieses Beispiel demonstrier den Gebrauch eines Nested Diagnostic Context (NDC)
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef ERRORDEMO_SOURCE_NDCSAMPLE_H_

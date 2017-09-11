@@ -1,8 +1,11 @@
 /*
  * EventSample.cpp
  *
- *  Created on: Sep 2, 2017
- *      Author: parallels
+ * Author: Peter Maurer
+ *
+ * Beispiel, das die Verwendung von Poco::Event illustriert.
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "ThreadDemo/EventSample.h"
@@ -20,6 +23,7 @@ namespace ThreadDemo
 	using Poco::Thread;
 	using Poco::ThreadPool;
 
+	// Worker setzt beim Start das Event und nimmt es beim Ende zurück
 	class Worker
 	{
 	public:
@@ -39,6 +43,9 @@ namespace ThreadDemo
 		}
 	};
 
+	// Progress Thread druckt Punkte, solange das _progressEvent gesetzt ist das _stopEvent
+	// nicht gesetzt ist.
+	//
 	class ProgressRunnable : public Runnable
 	{
 	public:

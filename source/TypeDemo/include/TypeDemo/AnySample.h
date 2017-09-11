@@ -1,8 +1,11 @@
 /*
  * AnySample.h
  *
- *  Created on: Aug 25, 2017
- *      Author: peter
+ *  Created on: Aug 25, 2014
+ *      Author: Peter Maurer
+ *
+ *  Beispielprogramm für den Gebrauch von Poco::Any
+ *
  */
 
 #ifndef TYPEDEMO_INCLUDE_TYPEDEMO_ANYSAMPLE_H_

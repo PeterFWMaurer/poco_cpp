@@ -1,8 +1,11 @@
 /*
  * NotificationDemoSub.h
  *
- *  Created on: Sep 7, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel für die Verwendung von Delegates mit Zerfallsdatum in Poco
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef NOTIFICATIONDEMO_SOURCE_NOTIFICATIONDEMOSUB_H_

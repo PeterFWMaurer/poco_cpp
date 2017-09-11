@@ -1,8 +1,7 @@
 /*
  * PocoSampleApplication.cpp
  *
- *  Created on: Aug 23, 2017
- *      Author: peter
+ *
  */
 
 #include "FoundationSample/SampleApp.h"
@@ -106,5 +105,6 @@ namespace FoundationSample
 				}
 			}
 		}
+		return Application::EXIT_OK;
 	}
 }

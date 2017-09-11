@@ -1,8 +1,11 @@
 /*
  * AnySample.cpp
  *
- *  Created on: Aug 25, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel, das verschiedenen Arten zeigt, wie Threads in Poco implementiert werden können
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "ThreadDemo/ThreadSample.h"
@@ -23,7 +26,8 @@ namespace ThreadDemo
 	using Poco::ActiveResult;
 	using Poco::Activity;
 
-
+	// Threads können mit Hilfe einer von Poco::Runnable abgeleiteten Klasse implementiert werden.
+	// Ein und dasselbe Runnable kann mehrfach parallel laufen
 	class SimpleRunnable : public Runnable
 	{
 	public:
@@ -31,6 +35,7 @@ namespace ThreadDemo
 			_os(os)
 		{}
 
+		// Die Funktion run() wird im Thread ausgeführt
 		virtual void run()
 		{
 			_os<<"SimpeRunnable::run called from Thread:"<<std::endl;
@@ -40,6 +45,8 @@ namespace ThreadDemo
 		std::ostream &_os;
 	};
 
+	// Ein Thread kann auch mit Hilfe eines RunnableAdapters gestarten werden. Unsere Beispielklasse
+	// meldet die Funktion print() an, die im Thread ausgeführt wird
 	class ThreadInfoPrinter
 	{
 	public:
@@ -50,6 +57,7 @@ namespace ThreadDemo
 		void print()
 		{
 			_os<<"ThreadInfoPrinter::print called from Thread:"<<std::endl;
+			ThreadSample::printThreadInfo(_os);
 		}
 
 	private:
@@ -57,6 +65,7 @@ namespace ThreadDemo
 
 	};
 
+	// Ein Objekt kann eine ActiveMethod haben, die in einem Thread aus dem Threadpool ausgefuuhrt wird
 	class SimpleActiveObject
 	{
 	public:
@@ -75,6 +84,7 @@ namespace ThreadDemo
 		}
 	};
 
+	// Ein objekt kann eine oder mehrer Activities haben, die in einem oder mehreren Threads ausgeführt werden
 	class ObjectWithActivity
 	{
 	public:
@@ -114,6 +124,7 @@ namespace ThreadDemo
 		std::ostream& _os;
 	};
 
+	// Hilfsfunktion zum Ausgeben von Informationen über den Thread, in dem Sie ausgeführt wird
 	void ThreadSample::printThreadInfo(std::ostream& os)
 	{
 		Thread *myThread = Thread::current();
@@ -175,10 +186,6 @@ namespace ThreadDemo
 		myObjectWithActivity.startMyActivity();
 		Thread::sleep(1200);
 		myObjectWithActivity.stopMyActivity();
-
-
-
-
 	}
 }
 

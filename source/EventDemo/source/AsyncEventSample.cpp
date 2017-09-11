@@ -1,8 +1,11 @@
 /*
  * AsyncEventSample.cpp
  *
- *  Created on: Sep 7, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel für die Verwendung von asynchronen Events in Poco
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "EventDemo/AsyncEventSample.h"
@@ -17,6 +20,10 @@ namespace EventDemo
 	using Poco::BasicEvent;
 	using Poco::Thread;
 
+
+	// Wir definieren eine eigene Quelle, die das Event asynchron verschickt, ansonsten entspricht sie
+	// der in unsermen synchronen Beispiel.
+	//
 	class AsyncEventSource
 	{
 	public:
@@ -34,6 +41,8 @@ namespace EventDemo
 		}
 	};
 
+	// Das Asynchone Target legt eine kleine Pause bei der Verarbeitung des Events ein
+	//
 	class AsyncEventTarget
 	{
 	public:
@@ -62,16 +71,21 @@ namespace EventDemo
 
 	void AsyncEventSample::run(std::ostream& os, std::istream& is)
 	{
+		// Erzeugen von Source und Target auf dem Stack
 		AsyncEventSource mySource;
-		SampleEvtInfo evtData("myEventInfo");
-
 		AsyncEventTarget myTarget("myTarget",os);
 
+		// Erzeugen der Eventdaten
+		SampleEvtInfo evtData("myEventInfo");
+
+		// Source und Target werden wie üblich mit Hilfe eines Delegate verbunden
 		mySource.event += Poco::delegate(&myTarget,&AsyncEventTarget::onSampleEvent);
 
+		// Jetzt wird das Event asynchron gesendet...
 		std::cout<<"Firing asynchronous event to myTarget..."<<std::endl;
 		mySource.asyncFireSampleEvent(evtData);
 
+		// Wir beobachten nun, was mit dem count passiert...
 		os<<"After firing: My Event count = "<<evtData.count()<<std::endl<<std::endl;
 		os<<"Sleeping for 10ms..."<<std::endl;
 		Thread::sleep(10);
@@ -86,6 +100,7 @@ namespace EventDemo
 			++myData;
 			os<<"After firing and increasing myData: My Event count = "<<myData.count()<<std::endl;
 		}
+
 		Thread::sleep(1000);
 		os<<"Waited for processing of event"<<std::endl;
 	}

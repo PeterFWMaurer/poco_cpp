@@ -1,8 +1,11 @@
 /*
  * SynchronizedSample.cpp
  *
- *  Created on: Sep 4, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel, das die Verwendung von Poco::SynchronizedObject illustriert.
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "ThreadDemo/SynchronizedSample.h"
@@ -34,7 +37,7 @@ namespace ThreadDemo {
 			return 42;
 		}
 
-		int waitForNotification()
+		void waitForNotification()
 		{
 			Thread *myThread = Thread::current();
 			_os<<"Entered waitForNotification in SychObject (thread id "<<myThread->id()<<")"<<std::endl;

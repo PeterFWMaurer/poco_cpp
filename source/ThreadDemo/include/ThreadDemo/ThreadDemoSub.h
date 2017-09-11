@@ -1,8 +1,11 @@
 /*
  * TypeDemoSub.h
  *
- *  Created on: Aug 24, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Sample class for Poco thread samples
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef TYPEDEMO_INCLUDE_THREADDEMO_THREADDEMOSUB_H_

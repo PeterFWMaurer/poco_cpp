@@ -1,8 +1,11 @@
 /*
  * ExpireDelegateSample.cpp
  *
- *  Created on: Sep 7, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel für die Verwendung von Delegates mit Zerfallsdatum in Poco
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "EventDemo/ExpireDelegateSample.h"
@@ -22,15 +25,22 @@ namespace EventDemo
 
 	void ExpireDelegateSample::run(std::ostream &os, std::istream &is)
 	{
+		// Source, Target und Event wie gewohnt erzeugen
 		SampleEventSource mySource;
 		SampleEventTarget myTarget("target",os);
 		SampleEvtInfo evtData("My Event");
 
+		// Dem Delegate wird mit Hilfe von Poco::Expire eine Zerfallszeit zugeordnet.
 		mySource.event += Expire<SampleEvtInfo>(Poco::delegate(&myTarget,&SampleEventTarget::onSampleEvent),1000);
 		std::cout<<"Firing Event:"<<std::endl;
+
+		// Vor Ablauf der Zefallszeit wird das Event gesendet...
 		mySource.fireSampleEvent(evtData);
 		std::cout<<"Waiting before firing again..."<<std::endl;
+
 		Thread::sleep(2000);
+
+		// ... danach nicht mehr
 		mySource.fireSampleEvent(evtData);
 		os<<"Fired again after 2000ms sleep!"<<std::endl;
 	}

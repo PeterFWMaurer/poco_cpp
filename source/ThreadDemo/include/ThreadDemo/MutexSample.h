@@ -1,8 +1,11 @@
 /*
  * MutexSample.h
  *
- *  Created on: Sep 1, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel, das die Verwendung von Poco::Mutex illustriert.
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef THREADDEMO_SOURCE_MUTEXSAMPLE_H_

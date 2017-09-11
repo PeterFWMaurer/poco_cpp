@@ -1,8 +1,11 @@
 /*
  * MutexSample.cpp
  *
- *  Created on: Sep 1, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel, das die Verwendung von Poco::Mutex illustriert.
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "ThreadDemo/MutexSample.h"
@@ -50,6 +53,7 @@ namespace ThreadDemo
 
 		int getPower(int power)
 		{
+			// Mutex immer über ScopedLock verwenden...
 			FastMutex::ScopedLock lock(_powersMutex);
 			if (power>_maxPower)
 			{
@@ -73,6 +77,8 @@ namespace ThreadDemo
 		Poco::FastMutex _powersMutex;
 	};
 
+	// Die Klasse Name wird durch einen Mutex geschützt, da hier ein rkursiver Zugriff
+	// auf den Mutex erfolgen kann, der bei einem FastMutex zu einem Deadlock führen würde
 	class Name
 	{
 	public:
@@ -109,6 +115,9 @@ namespace ThreadDemo
 		Mutex _nameMutex;
 	};
 
+	// Das Folgende Template dient dem Geschwindigkeitsvergleich zwischen Mutex und FastMutex.
+	// Deshalb kan der tatsächlich verwendete Mutex als Template-Argument übergeben werden
+	//
 	template <typename MutexPolicy>
 	class MutexPerformanceMeasurement
 	{

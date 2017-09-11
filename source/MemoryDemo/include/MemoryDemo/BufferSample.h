@@ -1,8 +1,11 @@
 /*
  * BufferSample.h
  *
- *  Created on: Sep 6, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel für die Verwendung von Poco::Buffer
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef MEMORYDEMO_SOURCE_BUFFERSAMPLE_H_

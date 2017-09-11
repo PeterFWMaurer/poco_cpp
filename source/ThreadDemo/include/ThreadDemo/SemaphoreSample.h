@@ -1,8 +1,11 @@
 /*
  * SemaphoreSample.h
  *
- *  Created on: Sep 4, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel, das die Verwendung von Poco::Semaphore illustriert.
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef THREADDEMO_SOURCE_SEMAPHORESAMPLE_H_

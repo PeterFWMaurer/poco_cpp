@@ -1,8 +1,7 @@
 /*
  * DemoClient.h
  *
- *  Created on: Sep 8, 2017
- *      Author: peter
+ *      Author: Peter Maurer
  */
 
 #ifndef APPLICATIONDEMO_SOURCE_DEMOCLIENT_H_

@@ -1,8 +1,11 @@
 /*
  * AutoPtrSample.h
  *
- *  Created on: Sep 5, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel für die Verwendung von Poco::AutoPtr
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef MEMORYDEMO_SOURCE_AUTOPTRSAMPLE_H_

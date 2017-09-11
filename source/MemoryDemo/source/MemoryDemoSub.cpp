@@ -1,8 +1,11 @@
 /*
  * MemoryDemoSub.cpp
  *
- *  Created on: Sep 5, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Sample-Class for Poco Memory Examples
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "MemoryDemo/MemoryDemoSub.h"

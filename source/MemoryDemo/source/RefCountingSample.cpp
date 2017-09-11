@@ -1,8 +1,11 @@
 /*
  * RefCountingSample.cpp
  *
- *  Created on: Sep 5, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel für ein von Hand implementiertes Objekt mit Referenzzählung
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "MemoryDemo/RefCountingSample.h"
@@ -18,9 +21,12 @@ namespace MemoryDemo
 	using Poco::FastMutex;
 	using Poco::AutoPtr;
 
+	// SimpleRefCounting implementiert ein Objekt, dass die Referenzen auf sich zählt und sich selbst löscht,
+	// wenn es nicht mehr benötigt wird.
 	class SimpleRefCounting
 	{
 	public:
+		// Beim Erzeugen wird der Referrenzzähler auf 1 gesetzt.
 		SimpleRefCounting(std::ostream& os):
 			_rc(1),
 			_os(os)
@@ -28,6 +34,8 @@ namespace MemoryDemo
 			printInfo("SimpleRefCounting constructor called");
 		}
 
+		// Die Methode duplicate() wird aufgerufen, wenn ein neuer Smartpointer auf das Objekt erzeugt wird.
+		//
 		void duplicate()
 		{
 			FastMutex::ScopedLock lock(_rcMutex);
@@ -35,6 +43,8 @@ namespace MemoryDemo
 			printInfo("SimpleRefCounting duplicate called");
 		}
 
+		// Die Methode release() wird aufgerufen, wenn ein Smartpointer gelöscht wird, also keine Referenz mehr
+		// auf das Objekt benötigt
 		void release()
 		{
 			printInfo("SimpleRefCounting release called (info before decrement)");
@@ -55,17 +65,22 @@ namespace MemoryDemo
 		FastMutex _rcMutex;
 		std::ostream& _os;
 
+		// Der private Destruktor verhindert, dass das Objekt auf dem Stack angelegt wird
+		//
 		virtual ~SimpleRefCounting()
 		{
 			printInfo("SimpleRefCounting destructor called");
-
 		}
 
+		// Hildsmethode zur Ausgabe der Adresse und des Referenzzählers
 		void printInfo(const std::string &msg)
 		{
 			_os<<msg<<" object : "<<reinterpret_cast<Poco::UIntPtr>(this)<<" rc : "<<_rc<<std::endl;
 		}
 
+		// Copykonstruktor und Assignmentoperator werden privat angelegt, um versehentliches Kopieren
+		// des Objekts zu verhindern.
+		//
 		SimpleRefCounting(const SimpleRefCounting &);
 
 		SimpleRefCounting & operator = (const SimpleRefCounting &);

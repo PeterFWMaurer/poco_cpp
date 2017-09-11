@@ -1,8 +1,11 @@
 /*
  * SemaphoreSample.cpp
  *
- *  Created on: Sep 4, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Beispiel, das die Verwendung von Poco::Semaphore illustriert.
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "ThreadDemo/SemaphoreSample.h"
@@ -18,6 +21,8 @@ namespace ThreadDemo
 	using Poco::Thread;
 	using Poco::ThreadPool;
 
+	// Die Klasse Semaworker wartet in ihrer run() Methode auf eine Semaphore und gibt eine Fehlermeldung
+	// aus, wenn die Semaphore nicht belegt werden kann.
 	class SemaWorker : public Runnable
 	{
 	public:
@@ -53,6 +58,7 @@ namespace ThreadDemo
 
 	void SemaphoreSample::run(std::ostream& os, std::istream& is)
 	{
+		// Unsere Semaphore lässt gleichzeitig 2 Threads zu
 		Semaphore mySemaphore(2);
 		SemaWorker worker(mySemaphore,os);
 		ThreadPool::defaultPool().start(worker);
