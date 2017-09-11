@@ -6,6 +6,9 @@ string(CONCAT TEST_NAME "test_" ${LIB_NAME})
 
 set(APP_SOURCES
     source/SampleServer.cpp
+    source/EchoServerMTSub.cpp
+    source/EchoServerConnectionFactory.cpp
+    source/EchoServerConnection.cpp
 )
 
 set(TEST_SOURCES

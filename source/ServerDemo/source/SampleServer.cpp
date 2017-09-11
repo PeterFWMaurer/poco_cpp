@@ -7,6 +7,8 @@
 
 #include "ServerDemo/SampleServer.h"
 
+#include "ServerDemo/EchoServerMTSub.h"
+
 #include <iostream>
 
 POCO_SERVER_MAIN(ServerDemo::SampleServer);
@@ -14,7 +16,9 @@ POCO_SERVER_MAIN(ServerDemo::SampleServer);
 namespace ServerDemo
 {
 	SampleServer::SampleServer()
-	{}
+	{
+		addSubsystem(new EchoServerMTSub());
+	}
 
 	SampleServer::~SampleServer()
 	{}
