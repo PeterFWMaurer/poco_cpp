@@ -7,24 +7,45 @@
 
 #include "ServerDemo/EchoServerConnection.h"
 
+#include "Poco/UTF8String.h"
+#include "Poco/Net/SocketStream.h"
+
+
 namespace ServerDemo
 {
+	using Poco::Exception;
+	using Poco::Net::SocketStream;
 
-	EchoServerConnection::EchoServerConnection(const StreamSocket& socket):
-		TCPServerConnection(socket)
+	using std::string;
+
+	EchoServerConnection::EchoServerConnection(const StreamSocket& socket, Logger &logger):
+		TCPServerConnection(socket),
+		_logger(logger)
 	{
-		// TODO Auto-generated constructor stub
-
+		_logger.debug("TCPServerConnection established for client %s",socket.peerAddress().toString());
 	}
 
 	EchoServerConnection::~EchoServerConnection()
-	{
-		// TODO Auto-generated destructor stub
-	}
+	{}
 
 	void EchoServerConnection::run()
 	{
-
+		_logger.debug("Processing requests from client %s",socket().peerAddress().toString());
+		string input;
+		while(input != "finish")
+		{
+			try
+			{
+				SocketStream sockStream(socket());
+				sockStream>>input;
+				string output = Poco::UTF8::toUpper(input);
+				sockStream<<output;
+			}
+			catch (const Exception &exp)
+			{
+				_logger.log(exp);
+			}
+		}
 	}
 
 } /* namespace ServerDemo */

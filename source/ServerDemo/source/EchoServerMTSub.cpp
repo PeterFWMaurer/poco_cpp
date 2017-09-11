@@ -57,15 +57,15 @@ namespace ServerDemo {
 
 	void EchoServerMTSub::startService()
 	{
-		_pTcpServer = new TCPServer(new EchoServerConnectionFactory(),_port);
+		_pTcpServer = new TCPServer(new EchoServerConnectionFactory(logger()),_port);
 		_pTcpServer->start();
 		logger().debug("Started TCPServer");
-
-
 	}
 
 	void EchoServerMTSub::stopService()
 	{
+		_pTcpServer->stop();
+		logger().debug("Stopped TCPServer");
 	}
 
 } /* namespace ServerDemo */

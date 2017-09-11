@@ -25,6 +25,7 @@ namespace ServerDemo
 
 	void SampleServer::initialize(Application &self)
 	{
+		loadConfiguration();
 		ServerApplication::initialize(self);
 	}
 
@@ -40,6 +41,11 @@ namespace ServerDemo
 
 	int SampleServer::main(const vector<string>& args)
 	{
+		EchoServerMTSub& echoServer = getSubsystem<EchoServerMTSub>();
+		echoServer.startService();
+		waitForTerminationRequest();
+		echoServer.stopService();
+
 		return Application::EXIT_OK;
 	}
 

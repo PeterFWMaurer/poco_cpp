@@ -7,23 +7,21 @@
 
 #include "ServerDemo/EchoServerConnectionFactory.h"
 
+#include "ServerDemo/EchoServerConnection.h"
+
 namespace ServerDemo
 {
 
-	EchoServerConnectionFactory::EchoServerConnectionFactory()
-	{
-		// TODO Auto-generated constructor stub
-
-	}
+	EchoServerConnectionFactory::EchoServerConnectionFactory(Logger &logger):
+		_logger(logger)
+	{}
 
 	EchoServerConnectionFactory::~EchoServerConnectionFactory()
-	{
-		// TODO Auto-generated destructor stub
-	}
+	{}
 
 	TCPServerConnection* EchoServerConnectionFactory::createConnection(const StreamSocket& socket)
 	{
-		return 0;
+		return new EchoServerConnection(socket,_logger);
 	}
 
 

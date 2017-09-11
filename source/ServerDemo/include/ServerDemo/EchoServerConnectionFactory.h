@@ -11,8 +11,11 @@
 
 #include <Poco/Net/TCPServerConnectionFactory.h>
 
+#include "Poco/Logger.h"
+
 namespace ServerDemo {
 
+	using Poco::Logger;
 	using Poco::Net::StreamSocket;
 	using Poco::Net::TCPServerConnection;
 	using Poco::Net::TCPServerConnectionFactory;
@@ -20,11 +23,14 @@ namespace ServerDemo {
 	class EchoServerConnectionFactory: public TCPServerConnectionFactory
 	{
 	public:
-		EchoServerConnectionFactory();
+		EchoServerConnectionFactory(Logger& _logger);
 
 		virtual ~EchoServerConnectionFactory();
 
 		TCPServerConnection* createConnection(const StreamSocket& socket);
+
+	private:
+		Logger& _logger;
 	};
 
 } /* namespace ServerDemo */
