@@ -35,7 +35,7 @@ namespace EventDemo
 
 		virtual ~AsyncEventSource(){}
 
-		void asyncFireSampleEvent(SampleEvtInfo& evi)
+		void asyncFireSampleEvent(const SampleEvtInfo& evi)
 		{
 			event.notifyAsync(this,evi);
 		}
