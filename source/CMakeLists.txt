@@ -44,6 +44,7 @@ include_directories(
    MemoryDemo/include
    EventDemo/include
    NotificationDemo/include
+   SimpleShared/include
    ${CMAKE_PREFIX_PATH/inlclude}
 )
 
@@ -60,4 +61,7 @@ add_subdirectory(FoundationSample)
 add_subdirectory(ApplicationDemo)
 
 add_subdirectory(ServerDemo)
+
+add_subdirectory(SharedDemo)
+add_subdirectory(SimpleShared)
 

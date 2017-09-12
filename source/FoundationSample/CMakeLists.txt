@@ -2,7 +2,8 @@
 include_directories(include)
 
 set(APP_NAME FoundationSample)
-string(CONCAT TEST_NAME "test_" ${LIB_NAME})
+string(CONCAT APP_NAME ${APP_NAME} ${CMAKE_DEBUG_POSTFIX})
+string(CONCAT TEST_NAME "test_" ${APP_NAME})
 
 set(APP_SOURCES
     source/SampleApp.cpp

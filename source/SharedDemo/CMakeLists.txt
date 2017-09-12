@@ -1,13 +1,12 @@
 # include_directories(inc)
 include_directories(include)
 
-set(APP_NAME ApplicationDemo)
+set(APP_NAME SharedDemo)
 string(CONCAT APP_NAME ${APP_NAME} ${CMAKE_DEBUG_POSTFIX})
 string(CONCAT TEST_NAME "test_" ${LIB_NAME})
 
 set(APP_SOURCES
-    source/SampleApplication.cpp
-    source/DemoClient.cpp
+    source/SharedDemoMain.cpp
  )
 
 add_executable(${APP_NAME}
