@@ -14,7 +14,8 @@ EXT_DIR_DEBUG := $(EXT_DIR)/build/debug
 EXT_DIR_RELEASE := $(EXT_DIR)/build/release
 BUILD_DIR_DEBUG := $(BUILD_DIR)/debug
 BUILD_DIR_RELEASE := $(BUILD_DIR)/release
-PREFIX_DIR := $(PROJECT_DIR)/root/usr/local
+PREFIX_ROOT := $(PROJECT_DIR)/root
+PREFIX_DIR := $(PREFIX_ROOT)/usr/local
 
 PATH := $(PATH):/usr/local/bin
 GENERATOR := "Unix Makefiles"
@@ -34,7 +35,7 @@ all: debug release
 # full: makes everything including external projects
 #
 .PHONY: full
-full: full_debug full_release
+full: ext_debug ext_release all
 
 .PHONY: full_debug
 full_debug: ext_debug debug
@@ -79,4 +80,4 @@ ext_clean:
 
 .PHONY: clean_all
 clean_all: clean ext_clean
-	$(Q)rm -rf $(PREFIX_DIR)
+	$(Q)rm -rf $(PREFIX_ROOT)
