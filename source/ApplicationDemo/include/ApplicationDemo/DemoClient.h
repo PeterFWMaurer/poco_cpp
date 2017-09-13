@@ -1,7 +1,11 @@
 /*
  * DemoClient.h
  *
- *      Author: Peter Maurer
+ * Author: Peter Maurer
+ *
+ * DemoClient Subsystem, sends a string to server
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef APPLICATIONDEMO_SOURCE_DEMOCLIENT_H_

@@ -1,8 +1,11 @@
 /*
  * EchoServerMTSub.cpp
  *
- *  Created on: Sep 9, 2017
- *      Author: parallels
+ * EchoServeConnection.h
+ *
+ * Author: Peter Maurer
+ *
+ * Beispiel fuer ein Subsystem, dass einen TCP-Server Dienst parametriert
  */
 
 #include "ServerDemo/EchoServerMTSub.h"

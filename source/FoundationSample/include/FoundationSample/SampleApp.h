@@ -1,8 +1,11 @@
 /*
  * PocoSampleApplication.h
  *
- *  Created on: Aug 22, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Application running foundation samples
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef POCOSAMPLE_INCLUDE_POCOSAMPLE_POCOSAMPLEAPPLICATION_H_

@@ -1,8 +1,11 @@
 /*
  * Sample.h
  *
- *  Created on: Aug 24, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Base class for a poco samplee
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef SAMPLESUBSYSTEM_INCLUDE_SAMPLESUBSYSTEM_SAMPLE_H_

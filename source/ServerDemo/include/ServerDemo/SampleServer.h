@@ -1,8 +1,11 @@
 /*
  * SampleServer.h
  *
- *  Created on: Sep 9, 2017
- *      Author: peter
+ * EchoServeConnection.h
+ *
+ * Author: Peter Maurer
+ *
+ * Beispiel fuer eine ServerApplication
  */
 
 #ifndef SERVERDEMO_SOURCE_SAMPLESERVER_H_

@@ -1,8 +1,13 @@
 /*
  * EchoServerConnectionFactory.h
  *
- *  Created on: Sep 10, 2017
- *      Author: parallels
+ * EchoServeConnection.h
+ *
+ * Author: Peter Maurer
+ *
+ * Beispiel fuer eine TCPServerConnectionFactory, die eine EchoServerConnection erzeugt
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef SERVERDEMO_SOURCE_ECHOSERVERCONNECTIONFACTORY_H_

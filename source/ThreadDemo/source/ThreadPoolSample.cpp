@@ -30,12 +30,12 @@ namespace ThreadDemo {
 	// Die Klasse Worker dient in unserem Beispiel als Runnable - ihrer einzige Aufgabe
 	// ist es, einen definierten Zeitraum im Thread zu verbleiben.
 	//
-	class Worker : public Runnable
+	class SimpleWorker : public Runnable
 	{
 	public:
-		Worker(){}
+		SimpleWorker(){}
 
-		virtual ~Worker(){}
+		virtual ~SimpleWorker(){}
 
 		void run()
 		{
@@ -60,7 +60,7 @@ namespace ThreadDemo {
 			workers.push_back(Worker());
 		}
 */
-		Worker myWorker;
+		SimpleWorker myWorker;
 
 		Timestamp beforeThreadStart;
 
@@ -79,7 +79,8 @@ namespace ThreadDemo {
 	Timespan ThreadPoolSample::createThreadsWithSimpleThreads(int noOfThreads)
 	{
 		vector<SharedPtr<Thread>> simpleThreads;
-		Worker myWorker;
+
+		SimpleWorker myWorker;
 
 		Timestamp beforeThreadStart;
 		for (int i=0;i<noOfThreads;i++)

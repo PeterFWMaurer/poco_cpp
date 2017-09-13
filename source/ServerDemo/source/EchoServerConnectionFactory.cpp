@@ -1,8 +1,11 @@
 /*
  * EchoServerConnectionFactory.cpp
  *
- *  Created on: Sep 10, 2017
- *      Author: parallels
+ * EchoServeConnection.h
+ *
+ * Author: Peter Maurer
+ *
+ * Beispiel fuer eine TCPServerConnectionFactory, die eine EchoServerConnection erzeugt
  */
 
 #include "ServerDemo/EchoServerConnectionFactory.h"

@@ -1,8 +1,11 @@
 /*
  * SampleSub.cpp
  *
- *  Created on: Aug 24, 2017
- *      Author: peter
+ * Author: Peter Maurer
+ *
+ * Base class for sample subsystems
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 #include "SampleSubsystem/SampleSub.h"
 

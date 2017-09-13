@@ -1,7 +1,11 @@
 /*
  * SampleApplication.h
  *
- *      Author: Peter Maurer
+ * Author: Peter Maurer
+ *
+ * Beispiel fuer eine Application, die ein Subststem laedt und startet
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef APPLICATIONDEMO_SOURCE_SAMPLEAPPLICATION_H_

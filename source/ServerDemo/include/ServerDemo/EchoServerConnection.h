@@ -1,8 +1,12 @@
 /*
  * EchoServeConnection.h
  *
- *  Created on: Sep 10, 2017
- *      Author: parallels
+ * Author: Peter Maurer
+ *
+ * Beispiel fuer eine einfache TCPServerConnection, die ein Wort aus dem
+ * Stream ausliest und es in Grossbuchstaben zuruecksendet.
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #ifndef SERVERDEMO_SOURCE_ECHOSERVERCONNECTION_H_

@@ -1,7 +1,11 @@
 /*
  * PocoSampleApplication.cpp
  *
+ * Author: Peter Maurer
  *
+ * Application running foundation samples
+ *
+ * Copyright (C) 2013-2017 Maurer & Treutner GmbH & Co. KG, Leopoldhafen
  */
 
 #include "FoundationSample/SampleApp.h"
@@ -43,13 +47,11 @@ namespace FoundationSample
 			_helpRequested(false)
 	{
 		addSubsystem(new TypeDemoSub());
-		addSubsystem(new ErrorDemoSub());
-		addSubsystem(new MemoryDemoSub());
-		addSubsystem(new EventDemoSub());
-		addSubsystem(new NotificationDemoSub());
-		// addSubsystem(new ThreadDemoSub());
-	//	SampleSubsystem::SampleSub *pS=new SampleSubsystem::SampleSub("Hallo");
-	//	addSubsystem(new TestSubsystem);
+//		addSubsystem(new ErrorDemoSub());
+//		addSubsystem(new MemoryDemoSub());
+//		addSubsystem(new EventDemoSub());
+//		addSubsystem(new NotificationDemoSub());
+//		addSubsystem(new ThreadDemoSub());
 	}
 
 	void SampleApp::initialize(Application &self)
